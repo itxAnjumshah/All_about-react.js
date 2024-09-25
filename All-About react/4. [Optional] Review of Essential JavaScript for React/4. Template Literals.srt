@@ -1,0 +1,263 @@
+1
+00:00:00,830 --> 00:00:01,910
+In this lecture.
+
+2
+00:00:01,910 --> 00:00:04,400
+Let's review template literals.
+
+3
+00:00:05,330 --> 00:00:12,590
+So template Literals are an ES6 JavaScript feature which allows us to very easily create strings that
+
+4
+00:00:12,590 --> 00:00:20,870
+contain some JavaScript variables or actually that contains any JavaScript expression inside of a string.
+
+5
+00:00:21,450 --> 00:00:26,940
+So let's illustrate that by using some of these variables that we have created here in the beginning.
+
+6
+00:00:28,030 --> 00:00:34,570
+So like some of these hear about this book in order to create a summary string of the book.
+
+7
+00:00:34,570 --> 00:00:40,570
+So creating a string that contains a summary of the current book object.
+
+8
+00:00:41,580 --> 00:00:43,890
+So let's create a summary.
+
+9
+00:00:44,680 --> 00:00:47,170
+And here is where we will have our string.
+
+10
+00:00:47,500 --> 00:00:52,210
+Now, usually strings in JavaScript are defined with normal quotes.
+
+11
+00:00:52,990 --> 00:00:56,080
+Like this or with double quotes.
+
+12
+00:00:56,110 --> 00:00:56,980
+Right.
+
+13
+00:00:57,070 --> 00:01:00,700
+However, template literals are with these backticks.
+
+14
+00:01:00,700 --> 00:01:07,360
+And if we're using an English keyboard, they are just above the tab key on the left side on the keyboard.
+
+15
+00:01:07,690 --> 00:01:12,280
+So these backticks indicate to JavaScript that this is a template literal.
+
+16
+00:01:14,280 --> 00:01:17,760
+So for now, let's just write anything here, and then I will.
+
+17
+00:01:18,520 --> 00:01:24,820
+Immediately write it out here again so that Quokka can display the result of this variable here.
+
+18
+00:01:24,820 --> 00:01:30,310
+And so for now, we see that this is still a normal string, as if it had been defined with the normal
+
+19
+00:01:30,310 --> 00:01:30,960
+quote.
+
+20
+00:01:30,970 --> 00:01:35,110
+But now let's actually add some JavaScript expression in here.
+
+21
+00:01:35,940 --> 00:01:40,140
+So for that we use this dollar sign and then curly braces.
+
+22
+00:01:43,670 --> 00:01:44,750
+So let's see.
+
+23
+00:01:44,930 --> 00:01:46,280
+Title is a book.
+
+24
+00:01:46,280 --> 00:01:53,330
+And indeed, this title right here, or in fact any JavaScript that is in here inside of this block
+
+25
+00:01:53,360 --> 00:01:58,190
+is then replaced in the string with the value that this block basically returns.
+
+26
+00:01:58,190 --> 00:01:59,960
+So the value that is created here.
+
+27
+00:01:59,960 --> 00:02:02,600
+And so title is, of course, Lord of the Rings.
+
+28
+00:02:02,600 --> 00:02:06,530
+And so then in the string we see The Lord of the Rings is a book.
+
+29
+00:02:07,520 --> 00:02:09,320
+So let's try something else here.
+
+30
+00:02:09,900 --> 00:02:13,020
+So as I was saying, any JavaScript expression works here.
+
+31
+00:02:13,020 --> 00:02:16,710
+So we can do two plus four or really whatever we want.
+
+32
+00:02:16,740 --> 00:02:20,850
+We can call functions here and really anything that is an expression.
+
+33
+00:02:20,850 --> 00:02:26,700
+So anything that immediately produces a value can be placed here inside this block.
+
+34
+00:02:28,820 --> 00:02:33,620
+Okay, but now let's create a little bit more of a nice looking string here.
+
+35
+00:02:33,950 --> 00:02:38,840
+So let's say The Lord of the Rings is a book with a certain number of pages.
+
+36
+00:02:40,050 --> 00:02:46,080
+So here we can use the pages variable, which remember we took out of the books object using destructuring.
+
+37
+00:02:46,080 --> 00:02:52,230
+And so now you start seeing why it is so helpful because otherwise we would have to write book title
+
+38
+00:02:52,230 --> 00:02:58,110
+then here, book dot pages and so on for all these variables that we're going to use here.
+
+39
+00:02:58,770 --> 00:03:03,450
+So we say 1216 page long book.
+
+40
+00:03:06,690 --> 00:03:08,520
+Was written by.
+
+41
+00:03:08,820 --> 00:03:10,620
+Now, let's use the author here.
+
+42
+00:03:11,510 --> 00:03:14,600
+And again, we took that one out using the structuring.
+
+43
+00:03:17,320 --> 00:03:19,360
+And published in.
+
+44
+00:03:19,480 --> 00:03:24,790
+And now here we can use or publish date or actually, I think it's called publication date.
+
+45
+00:03:26,550 --> 00:03:27,270
+All right.
+
+46
+00:03:27,270 --> 00:03:30,300
+So then here, sometimes the string becomes a bit too long.
+
+47
+00:03:30,300 --> 00:03:36,540
+And in that case, I just like to scroll down here and see the output right here in this panel here
+
+48
+00:03:36,540 --> 00:03:37,260
+on the bottom.
+
+49
+00:03:37,260 --> 00:03:44,370
+And by the way, in case that your quokka didn't open up this panel, you can always open it up by opening
+
+50
+00:03:44,370 --> 00:03:47,400
+the terminal, which should be.
+
+51
+00:03:48,080 --> 00:03:51,170
+Right here so you can do a new terminal.
+
+52
+00:03:53,390 --> 00:03:54,500
+Like this.
+
+53
+00:03:54,710 --> 00:04:00,920
+And then you see that here you have the problems tab, the output tab, and then here you can just select.
+
+54
+00:04:03,700 --> 00:04:04,600
+All right.
+
+55
+00:04:05,350 --> 00:04:09,820
+So here we have this string now, and here we have the publication date.
+
+56
+00:04:09,820 --> 00:04:13,900
+But here I just want the year and so let's just take out the year.
+
+57
+00:04:13,900 --> 00:04:19,360
+And so this is again to show you that we can write any JavaScript expression here inside these curly
+
+58
+00:04:19,360 --> 00:04:20,110
+braces.
+
+59
+00:04:22,270 --> 00:04:27,940
+So let's say we want to split this string by this dash which will result in an array.
+
+60
+00:04:27,940 --> 00:04:30,520
+And then from there we just take the first element.
+
+61
+00:04:31,290 --> 00:04:33,690
+So that's just standard JavaScript.
+
+62
+00:04:33,900 --> 00:04:37,770
+And so now indeed, here we get a string as we want it.
+
+63
+00:04:38,100 --> 00:04:38,760
+Great.
+
+64
+00:04:38,760 --> 00:04:42,090
+And that's actually all I had to tell you about template literals.
+
+65
+00:04:42,090 --> 00:04:44,640
+That's just how easy and straightforward they are.
+
+66
+00:04:44,670 --> 00:04:47,640
+But we use them really all the time in React.

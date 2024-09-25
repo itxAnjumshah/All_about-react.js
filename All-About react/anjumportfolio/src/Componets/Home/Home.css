@@ -1,0 +1,11 @@
+#home {
+  display: flex;
+  text-align: left;
+  margin: auto;
+  align-items: center;
+  height: 100vh;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 111px;
+}
+

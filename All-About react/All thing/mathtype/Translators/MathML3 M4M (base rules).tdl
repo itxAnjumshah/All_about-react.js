@@ -1,0 +1,15 @@
+// mtef2mathml3_m4m_base_rules.tdl
+
+// This file contains numeric entity references only. Although named entities are
+// more human-readable, many software programs do not yet understand named entities.
+// As a result, our default translator only generates numeric entities.
+
+// This file is intedended to override some rules from the basic TDL for purposes of
+// compatibility with MathType Web's translator. The rules in this file are specifically
+// intended to translate to MathML 3.
+
+// Long division: the scan part is necessary to use the denominator
+ldiv/scan  = "<(ns)mlongdiv charalign='center' charspacing='0px' stackalign='right'>$+$n#1$n#3$n<(ns)msgroup>$+$n#2$-$n</(ns)msgroup>$-$n</(ns)mlongdiv>";
+
+// Long division when there is no denominator
+ldiv       = "<(ns)mlongdiv charalign='center' charspacing='0px' stackalign='right'>$+$n<(ns)mrow/>$n#2$n<(ns)msgroup>$+$n#1$-$n</(ns)msgroup>$-$n</(ns)mlongdiv>";

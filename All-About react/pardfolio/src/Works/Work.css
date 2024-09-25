@@ -1,0 +1,95 @@
+
+.inner-output{
+   display: flex;
+align-items: center;
+flex-wrap: wrap;
+justify-content: space-between;
+justify-content: center;
+   gap: 20px;  
+   padding: 10px 20px;
+}
+
+.inner-output > * {
+    width: 15%;
+    
+}
+.inner-output img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    
+}
+.inner-output div{
+    display: flex;
+    flex-direction: column;
+  padding: 10px 20px;
+   
+    border: 3px solid  rgb(152, 114, 250);
+    box-shadow:1px 0px 10px 0px aqua ;
+}
+.inner-output div:hover{
+    box-shadow:1px 0px 10px 10px aqua ;
+}
+
+
+.btns-bottom {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.btns-bottom .delete-btn{
+    padding: 5px 15px;
+    border-radius: 50px;
+    border: none;
+    background-color: red;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.edit-btn{
+    background-color: yellow;
+    border-radius: 50px;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 15px;
+    color: red;
+    cursor: pointer;
+
+}
+.edit-btn:hover{
+    background-color: grey;
+    color: white;
+}
+.delete-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+/* starting  of   */
+.visible-contiaaner{
+    background-color: azure;
+    border: 3px solid rgb(255, 0, 8);
+    width: 50%;
+    
+   
+}
+
+.inner-visibel input{
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+  gap: 10px;
+  
+  margin: auto;
+
+}
+.update-btn{
+    margin-top: 10px;
+padding: 10px 20px;
+background-color: aqua;
+border-radius: 50px;
+border: none;
+}

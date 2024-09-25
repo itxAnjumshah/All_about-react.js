@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+.fixed-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+   
+}
+
+
+.navbar {
+    font-family: "Playwrite DE Grund", cursive;
+    background-color: rgb(49, 48, 48);
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    padding: 10px 20px ;
+    
+}
+
+.logo {
+    width: 250px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    font-size: 19px;
+}
+
+ul li:hover {
+    color: #d16527;
+}
+
+.number {
+    border: 2px solid orange;
+    clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+    padding: 10px 20px;
+}
+
+.number:hover {
+    background-color: #d16527;
+    transition: .2s cubic-bezier(.24,.74,.58,1);
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.hamburger{
+    display: none;
+}
+
+
+/* Media Queries */
+@media (max-width: 1050px) {
+    .logo {
+        width: 100%;
+        
+    }
+   nav ul li{
+        gap: 10px;
+    }
+}
+@media (max-width:750px) {
+    
+    
+}
+
+
+@media (max-width: 480px) {
+    .hamburger{
+       width: 250px;
+    }
+}

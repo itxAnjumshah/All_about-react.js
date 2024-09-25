@@ -1,0 +1,37 @@
+table,  td{
+    border: 1px solid black;
+}
+
+.cart-wrapper{
+display: flex;
+align-items: center;
+justify-content: space-around;
+background-color: aqua;
+
+
+margin: auto;
+}
+
+.img-wrapper img{
+    width: 100%;
+    border-radius: 100px;
+}
+.text-wrapper {
+font-size: 20px;
+display: flex;
+flex-direction: column;
+}
+.button-wrapper button {
+background: red;
+padding: 10px 20px;
+color: white;
+margin-top: 20px;
+
+}
+.shop-icon{
+    width: 40px;
+    float: right;
+    position: absolute;
+    right: 10px;
+    
+}

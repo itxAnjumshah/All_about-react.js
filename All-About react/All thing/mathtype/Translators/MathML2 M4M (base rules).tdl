@@ -1,0 +1,122 @@
+// mtef2mathml_m4m_base_rules.tdl
+
+// This file contains numeric entity references only. Although named entities are
+// more human-readable, many software programs do not yet understand named entities.
+// As a result, our default translator only generates numeric entities.
+
+// This file is intedended to override some rules from the basic TDL for purposes of
+// compatibility with MathType Web's translator.
+
+// parentheses (both)
+paren = "<(ns)mfenced>$+$n#1$-$n</(ns)mfenced>";
+// brackets (both)
+brack = "<(ns)mfenced close=$"]$" open=$"[$">$+$n#1$-$n</(ns)mfenced>";
+// braces (both)
+brace = "<(ns)mfenced close=$"}$" open=$"{$">$+$n#1$-$n</(ns)mfenced>";
+// angle brackets
+abrack = "<(ns)mfenced close=$"&$#x232A;$" open=$"&$#x2329;$">$+$n#1$-$n</(ns)mfenced>";
+// bars (both)
+bar = "<(ns)mfenced close=$"|$" open=$"|$">$+$n#1$-$n</(ns)mfenced>";
+// floor
+floor = "<(ns)mfenced close=$"&$#x230B;$" open=$"&$#x230A;$">$+$n#1$-$n</(ns)mfenced>";
+// ceiling
+ceil = "<(ns)mfenced close=$"&$#x2309;$" open=$"&$#x2308;$">$+$n#1$-$n</(ns)mfenced>";
+// left bracket, left bracket interval
+intval/lblb = "<(ns)mfenced close=$"[$" open=$"[$">$+$n#1$-$n</(ns)mfenced>";
+// right bracket, right bracket interval
+intval/rbrb = "<(ns)mfenced close=$"]$" open=$"]$">$+$n#1$-$n</(ns)mfenced>";
+// right bracket, left bracket interval
+intval/rblb = "<(ns)mfenced close=$"[$" open=$"]$">$+$n#1$-$n</(ns)mfenced>";
+// left bracket, right paren interval
+intval/lbrp = "<(ns)mfenced close=$")$" open=$"[$">$+$n#1$-$n</(ns)mfenced>";
+// left paren, right bracket interval
+intval/lprb = "<(ns)mfenced close=$"]$" open=$"($">$+$n#1$-$n</(ns)mfenced>";
+// parentheses (left)
+paren/l = "<(ns)mfenced close=$"$" open=$"($">$+$n#1$-$n</(ns)mfenced>";
+// parentheses (right)
+paren/r = "<(ns)mfenced close=$")$" open=$"$">$+$n#1$-$n</(ns)mfenced>";
+// brackets (left)
+brack/l = "<(ns)mfenced close=$"$" open=$"[$">$+$n#1$-$n</(ns)mfenced>";
+// brackets (right)
+brack/r = "<(ns)mfenced close=$"]$" open=$"$">$+$n#1$-$n</(ns)mfenced>";
+// braces (left)
+brace/l = "<(ns)mfenced close=$"$" open=$"{$">$+$n#1$-$n</(ns)mfenced>";
+// braces (right)
+brace/r = "<(ns)mfenced close=$"}$" open=$"$">$+$n#1$-$n</(ns)mfenced>";
+// angle brackets (left)
+abrack/l = "<(ns)mfenced close=$"$" open=$"&$#x2329;$">$+$n#1$-$n</(ns)mfenced>";
+// angle brackets (right)
+abrack/r = "<(ns)mfenced close=$"&$#x232A;$" open=$"$">$+$n#1$-$n</(ns)mfenced>";
+// bars (left)
+bar/l = "<(ns)mfenced close=$"$" open=$"|$">$+$n#1$-$n</(ns)mfenced>";
+// bars (right)
+bar/r = "<(ns)mfenced close=$"|$" open=$"$">$+$n#1$-$n</(ns)mfenced>";
+// dirac (right)
+braket/r = "<(ns)mfenced close=$"&$#x232A;$" open=$"|$">$+$n#2$-$n</(ns)mfenced>";
+// dirac (left)
+braket/l = "<(ns)mfenced close=$"|$" open=$"&$#x2329;$">$+$n#1$-$n</(ns)mfenced>";
+// braket
+braket = "<(ns)mfenced close=$"&$#x232A;$" open=$"&$#x2329;$">$+$n<(ns)mrow>$+$n#1$n<(ns)mo>|</(ns)mo>$n#2$-$n</(ns)mrow>$-$n</(ns)mfenced>";
+// double bars (both)
+dbar = "<(ns)mfenced close=$"&$#x2016;$" open=$"&$#x2016;$">$+$n#1$-$n</(ns)mfenced>";
+// double bars (left)
+dbar/l = "<(ns)mfenced close=$"$" open=$"&$#x2016;$">$+$n#1$-$n</(ns)mfenced>";
+// double bars (right)
+dbar/r = "<(ns)mfenced close=$"&$#x2016;$" open=$"$">$+$n#1$-$n</(ns)mfenced>";
+// Open brackets
+obrack = "<(ns)mfenced close=$"&$#x301B;$" open=$"&$#x301A;$">$+$n#1$-$n</(ns)mfenced>";
+// Left open bracket
+obrack/l = "<(ns)mfenced close=$"$" open=$"&$#x301A;$">$+$n#1$-$n</(ns)mfenced>";
+// Right open bracket
+obrack/r = "<(ns)mfenced close=$"&$#x301B;$" open=$"$">$+$n#1$-$n</(ns)mfenced>";
+
+// arc
+arc      = "<(ns)mover>$+$n#1$n<(ns)mo>&$#x23DC;</(ns)mo>$-$n</(ns)mover>$n";
+
+// under-bar
+ubar        = "<(ns)munder accentunder='true'>$+$n#1$n<(ns)mo stretchy='true'>&$#xAF;</(ns)mo>$-$n"
+              "</(ns)munder>$n";
+
+// double under-bar
+ubar/2      = "<(ns)munder accentunder='true'>$+$n<(ns)munder accentunder='true'>"
+              "$+$n#1$n<(ns)mo stretchy='true'>&$#xAF;</(ns)mo>$-$n</(ns)munder>$-$n"
+              "<(ns)mo stretchy='true'>&$#xAF;</(ns)mo>$-$n</(ns)munder>$n";
+
+run/vector = "<(ns)mstyle mathvariant='bold' mathsize='normal'><(ns)mi>#</(ns)mi></(ns)mstyle>";
+
+// matrix translation (left, center, right)
+matrix/l    = "<(ns)mtable columnalign='left' equalrows='true' equalcolumns='true'>$+$n#$-$n</(ns)mtable>";
+matrix      = "<(ns)mtable equalrows='true' equalcolumns='true'>$+$n#$-$n</(ns)mtable>";
+matrix/r    = "<(ns)mtable columnalign='right' equalrows='true' equalcolumns='true'>$+$n#$-$n</(ns)mtable>";
+
+// Thick space
+char/0xEF04/mathmode = "<(ns)mtext>&$#x2004;</(ns)mtext>";
+char/0xEF04/textmode = "&$#x2004;";
+
+// Arrows
+// Large over small arrow with upper text slot
+arrow/2/los   = "<(ns)mover>$+$n<(ns)mo stretchy='true'>&$#x2942;</(ns)mo>$n#1$-$n</(ns)mover>$n";
+
+// Large over small arrow with lower text slot
+arrow/2/los/b = "<(ns)munder>$+$n<(ns)mo stretchy='true'>&$#x2942;</(ns)mo>$n#2$-$n</(ns)munder>$n";
+
+// Large over small arrow with upper & lower text slots
+arrow/2/los/tb = "<(ns)munderover>$+$n<(ns)mo stretchy='true'>&$#x2942;</(ns)mo>$n#2$n#1$-$n</(ns)munderover>$n";
+
+// Small over large arrow with upper text slot
+arrow/2/sol   = "<(ns)mover>$+$n<(ns)mo stretchy='true'>&$#x2944;</(ns)mo>$n#1$-$n</(ns)mover>$n";
+
+// Small over large arrow with lower text slot
+arrow/2/sol/b = "<(ns)munder>$+$n<(ns)mo stretchy='true'>&$#x2944;</(ns)mo>$n#2$-$n</(ns)munder>$n";
+
+// Small over large arrow with upper & lower text slots
+arrow/2/sol/tb = "<(ns)munderover>$+$n<(ns)mo stretchy='true'>&$#x2944;</(ns)mo>$n#2$n#1$-$n</(ns)munderover>$n";
+
+arrow/2/h/sol = error "Template not currently supported: $n    (Cmd) -- (Desc)";
+arrow/2/h/los = error "Template not currently supported: $n    (Cmd) -- (Desc)";
+arrow/2/h/sol/b = error "Template not currently supported: $n    (Cmd) -- (Desc)";
+arrow/2/h/los/b = error "Template not currently supported: $n    (Cmd) -- (Desc)";
+arrow/2/h/sol/tb = error "Template not currently supported: $n    (Cmd) -- (Desc)";
+arrow/2/h/los/tb = error "Template not currently supported: $n    (Cmd) -- (Desc)";
+char/0x221E/mathmode = "<(ns)mo>&$#x(CharHex);</(ns)mo>";				// INFINITY SYMBOL
+char/0x0025/mathmode = "<(ns)mo>&$#x(CharHex);</(ns)mo>";				// PERCENT SYMBOL

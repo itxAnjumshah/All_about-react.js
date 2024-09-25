@@ -1,0 +1,343 @@
+1
+00:00:00,820 --> 00:00:05,320
+So in React, we need to define values based on a condition all the time.
+
+2
+00:00:05,320 --> 00:00:10,130
+And many times in situations where we cannot use an if else statement.
+
+3
+00:00:10,150 --> 00:00:14,170
+And so let's now learn how to use the ternary operator instead.
+
+4
+00:00:15,480 --> 00:00:22,380
+So in JavaScript, the ternary operator is a very special type of operator that has three operands.
+
+5
+00:00:22,380 --> 00:00:27,000
+So three parts that are needed for this operator to work.
+
+6
+00:00:27,120 --> 00:00:31,020
+So let's work here on the page's value again.
+
+7
+00:00:31,930 --> 00:00:35,980
+And so the first part of the ternary operator is a condition.
+
+8
+00:00:35,980 --> 00:00:40,870
+So let's say pages greater 1000.
+
+9
+00:00:41,200 --> 00:00:48,070
+So this is a condition and if this is true, the result of this operator will be whatever is after this
+
+10
+00:00:48,070 --> 00:00:49,090
+question mark.
+
+11
+00:00:49,390 --> 00:00:52,930
+So let's define a string here and let's say over.
+
+12
+00:00:53,930 --> 00:00:54,800
+1000.
+
+13
+00:00:56,530 --> 00:00:57,790
+Then let's add this colon.
+
+14
+00:00:57,790 --> 00:01:02,710
+And for now I will just write another string here and then I will explain what's happening.
+
+15
+00:01:03,550 --> 00:01:07,030
+So less than 1000.
+
+16
+00:01:07,180 --> 00:01:10,900
+So again, the ternary operator has three parts.
+
+17
+00:01:11,020 --> 00:01:13,300
+The first part is this condition here.
+
+18
+00:01:13,330 --> 00:01:21,730
+The second part is this second operand, which is the result of the operation in case that the condition
+
+19
+00:01:21,730 --> 00:01:22,490
+is true.
+
+20
+00:01:22,510 --> 00:01:29,260
+And in case that the condition is actually false, then the result of this operator will be this third
+
+21
+00:01:29,260 --> 00:01:30,850
+part of the operator.
+
+22
+00:01:31,820 --> 00:01:32,420
+Okay.
+
+23
+00:01:32,540 --> 00:01:38,210
+And in case that is confusing, just remember that an operator is a bit similar to a function, so it
+
+24
+00:01:38,210 --> 00:01:39,660
+always returns some value.
+
+25
+00:01:39,680 --> 00:01:46,910
+So for example, if we have two plus two, then the operator here is the two and it will result basically
+
+26
+00:01:46,910 --> 00:01:47,810
+this four.
+
+27
+00:01:48,510 --> 00:01:49,260
+Right.
+
+28
+00:01:49,470 --> 00:01:51,000
+And this operator here.
+
+29
+00:01:51,000 --> 00:01:57,780
+So the ternary operator again, will return this value here in case that the first operand is true.
+
+30
+00:01:57,810 --> 00:01:59,550
+So this condition is true.
+
+31
+00:01:59,550 --> 00:02:04,890
+And if it's false, then this part here will be the result of the operator.
+
+32
+00:02:05,480 --> 00:02:09,500
+And then we can, as always, store that result into a variable.
+
+33
+00:02:11,190 --> 00:02:15,150
+So let's just call this the pages range.
+
+34
+00:02:18,270 --> 00:02:19,500
+Let's lock that here.
+
+35
+00:02:19,770 --> 00:02:20,760
+And so.
+
+36
+00:02:21,790 --> 00:02:27,150
+Uh, our pages are currently 1210, which is, of course, more than 1000.
+
+37
+00:02:27,160 --> 00:02:31,570
+And so then here we get that pages rate is over 1000.
+
+38
+00:02:31,690 --> 00:02:33,550
+And if we had another book.
+
+39
+00:02:33,820 --> 00:02:38,320
+So if here a book was get book ID to.
+
+40
+00:02:39,200 --> 00:02:45,650
+Well, then our book still has 1210 pages because we are actually manipulating that value here.
+
+41
+00:02:45,680 --> 00:02:46,660
+Remember?
+
+42
+00:02:46,670 --> 00:02:48,410
+But let's take that out.
+
+43
+00:02:48,410 --> 00:02:56,270
+And then our book only has 295 pages, which will then result here in the string of less than 1000.
+
+44
+00:02:56,450 --> 00:03:00,460
+So then we can use this here, for example, to create another string.
+
+45
+00:03:00,470 --> 00:03:02,210
+Let's log that to the console.
+
+46
+00:03:03,310 --> 00:03:05,590
+And again using a template literal.
+
+47
+00:03:07,450 --> 00:03:08,980
+The book has.
+
+48
+00:03:11,090 --> 00:03:12,950
+Pages range.
+
+49
+00:03:15,080 --> 00:03:15,590
+Page.
+
+50
+00:03:15,590 --> 00:03:19,160
+And so now we get the book has less than 1000 pages.
+
+51
+00:03:19,840 --> 00:03:24,850
+Let's put this one here back and go also back to book number one.
+
+52
+00:03:25,090 --> 00:03:28,570
+And then we get the book has over a thousand pages.
+
+53
+00:03:29,580 --> 00:03:30,390
+Great.
+
+54
+00:03:30,390 --> 00:03:33,700
+So that's what we use the ternary operator for.
+
+55
+00:03:33,720 --> 00:03:39,630
+So to define a variable conditionally and let's just quickly do that here again, right here in the
+
+56
+00:03:39,630 --> 00:03:46,500
+summary string, just so I can show you that we can really use any JavaScript that returns a value here
+
+57
+00:03:46,500 --> 00:03:47,820
+in one of these blocks.
+
+58
+00:03:50,350 --> 00:03:51,520
+So the book.
+
+59
+00:03:53,220 --> 00:03:53,790
+Has.
+
+60
+00:03:54,470 --> 00:03:59,180
+Here will be our JavaScript block And then let me just write the end.
+
+61
+00:04:00,350 --> 00:04:04,850
+Been adapted as a movie.
+
+62
+00:04:05,570 --> 00:04:13,370
+And so here, basically, if the movie adaptation is true, then we want to return nothing.
+
+63
+00:04:13,370 --> 00:04:15,950
+And if it's false, we want to return not.
+
+64
+00:04:17,520 --> 00:04:19,770
+That makes more sense if we write it out.
+
+65
+00:04:19,820 --> 00:04:27,230
+So has movie adaptation, which we can again use because we already took it out of the object up here
+
+66
+00:04:27,230 --> 00:04:28,880
+in this destructuring.
+
+67
+00:04:30,670 --> 00:04:33,550
+So if has movie adaptation.
+
+68
+00:04:36,210 --> 00:04:37,590
+Then return nothing.
+
+69
+00:04:37,800 --> 00:04:40,110
+And if not, then return the string.
+
+70
+00:04:40,110 --> 00:04:42,240
+Not okay.
+
+71
+00:04:42,240 --> 00:04:45,450
+And well, that's a bit hard to see there.
+
+72
+00:04:48,070 --> 00:04:53,110
+So the book has been adapted as a movie, which makes sense because this year is true.
+
+73
+00:04:54,610 --> 00:04:57,250
+But once again if we change this to.
+
+74
+00:04:58,200 --> 00:05:01,110
+Number two here, then the book or.
+
+75
+00:05:01,140 --> 00:05:02,580
+Yeah, then the book is different.
+
+76
+00:05:02,580 --> 00:05:03,900
+It has no movie.
+
+77
+00:05:03,900 --> 00:05:06,240
+And so then or string should say.
+
+78
+00:05:06,980 --> 00:05:09,980
+The book has not been adapted as a movie.
+
+79
+00:05:10,010 --> 00:05:10,910
+Great.
+
+80
+00:05:11,980 --> 00:05:18,040
+So with this, we used a conditional right here inside the template literal and it would not have been
+
+81
+00:05:18,040 --> 00:05:25,090
+possible to use an if else statement here instead because an if else statement is well, as the name
+
+82
+00:05:25,090 --> 00:05:29,410
+says, it's a statement so it does not return a value.
+
+83
+00:05:29,410 --> 00:05:31,780
+So it would have been impossible to use that here.
+
+84
+00:05:31,780 --> 00:05:35,260
+And so then the ternary operator is exactly the way to go.
+
+85
+00:05:35,260 --> 00:05:39,610
+And as I said in the beginning, we do this all the time in React.
+
+86
+00:05:39,700 --> 00:05:46,360
+So this is one of these things that is really important to know before starting to write React applications.

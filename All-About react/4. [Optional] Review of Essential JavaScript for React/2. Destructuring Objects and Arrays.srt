@@ -1,0 +1,619 @@
+1
+00:00:00,890 --> 00:00:07,580
+So let's start this JavaScript review section with the very important concept of Destructuring.
+
+2
+00:00:08,490 --> 00:00:15,480
+And as always, I will start by creating a new folder here which I'm simply calling JavaScript review.
+
+3
+00:00:15,480 --> 00:00:21,660
+And then we need to get or start our files from the GitHub repo that we downloaded already in the beginning
+
+4
+00:00:21,660 --> 00:00:22,530
+of the course.
+
+5
+00:00:24,610 --> 00:00:29,230
+So let's select Script.js here from the starter folder.
+
+6
+00:00:30,330 --> 00:00:34,600
+And then let's paste that into the project folder that we just created.
+
+7
+00:00:34,620 --> 00:00:41,970
+And now to open up this folder, I will simply drag and drop this folder onto the VS code icon right
+
+8
+00:00:41,970 --> 00:00:45,350
+here, which then sets it as the project folder.
+
+9
+00:00:45,390 --> 00:00:51,240
+And alternatively, if that didn't work for some reason, you can of course always open up a project
+
+10
+00:00:51,240 --> 00:00:54,630
+folder simply by clicking here on Open.
+
+11
+00:00:55,280 --> 00:00:56,060
+Right.
+
+12
+00:00:56,180 --> 00:01:05,570
+But anyway, let's open up or script.js here and as we see it already contains some starter data.
+
+13
+00:01:05,570 --> 00:01:10,160
+So we have this array here which contains five book objects.
+
+14
+00:01:10,160 --> 00:01:15,650
+So we have one object for each book which has a title, a date, and so on.
+
+15
+00:01:15,650 --> 00:01:18,230
+So all the relevant stuff about books.
+
+16
+00:01:18,350 --> 00:01:22,070
+And then also I created two functions down here.
+
+17
+00:01:22,070 --> 00:01:26,690
+So this get books will basically simply return this data here.
+
+18
+00:01:26,690 --> 00:01:33,920
+And then we have get book by ID, which basically simply returns the book with the ID that we passed
+
+19
+00:01:33,920 --> 00:01:34,580
+in here.
+
+20
+00:01:36,990 --> 00:01:37,860
+All right.
+
+21
+00:01:38,190 --> 00:01:41,760
+So, again, this lecture is about destructuring.
+
+22
+00:01:44,800 --> 00:01:50,410
+And to start, let's create a variable called books, which will simply be the result.
+
+23
+00:01:51,340 --> 00:01:56,380
+Of calling get books now in order to actually execute this code.
+
+24
+00:01:56,410 --> 00:02:01,090
+We will now use a special extension for that which is called.
+
+25
+00:02:01,690 --> 00:02:02,260
+Quokka.
+
+26
+00:02:03,440 --> 00:02:09,980
+So just go ahead and download this extension, which will allow us to run some JavaScript code right
+
+27
+00:02:09,980 --> 00:02:11,750
+inside of VS code.
+
+28
+00:02:11,750 --> 00:02:17,450
+So without us having to connect this script with some HTML file for example.
+
+29
+00:02:17,720 --> 00:02:19,160
+So very helpful.
+
+30
+00:02:19,160 --> 00:02:25,550
+And then to start Quokka on this file, we can come to our command palette which is down here.
+
+31
+00:02:25,550 --> 00:02:29,030
+Or simply you can use this keyboard shortcut.
+
+32
+00:02:29,030 --> 00:02:34,790
+So you should actually memorize this because this command palette is really useful all the time.
+
+33
+00:02:35,000 --> 00:02:42,890
+So to start Quokka now on this file, you just type Quokka and type it correctly and then start.
+
+34
+00:02:44,210 --> 00:02:45,860
+So then it is this one.
+
+35
+00:02:45,860 --> 00:02:52,880
+So start on current file, hit enter and you see that immediately it opened this panel down here.
+
+36
+00:02:52,880 --> 00:02:54,590
+So in this output tab.
+
+37
+00:02:55,190 --> 00:02:59,720
+And also it activated this tool here on the left side.
+
+38
+00:03:00,710 --> 00:03:03,740
+And so now this code is actually already being executed.
+
+39
+00:03:03,740 --> 00:03:10,220
+But to see anything we can, for example, simply right now, this variable so this books that we already
+
+40
+00:03:10,220 --> 00:03:17,450
+have and it will immediately print it down here to this kind of console, it will show up here on the
+
+41
+00:03:17,450 --> 00:03:18,430
+left side.
+
+42
+00:03:18,440 --> 00:03:26,240
+So in this extension here in this tab and also it shows right here inside this file.
+
+43
+00:03:26,900 --> 00:03:31,150
+So this is actually really helpful, especially for smaller values.
+
+44
+00:03:31,160 --> 00:03:35,870
+So when you have an object, it's easier to check it out here in the sidebar.
+
+45
+00:03:35,990 --> 00:03:41,360
+So here we can now see this entire array and all the objects that are in there.
+
+46
+00:03:42,420 --> 00:03:42,870
+Okay.
+
+47
+00:03:42,870 --> 00:03:47,670
+And now with all the setup in place, let's actually quickly talk about the structuring.
+
+48
+00:03:47,670 --> 00:03:51,450
+So the structuring is very, very useful all the time.
+
+49
+00:03:51,450 --> 00:03:57,330
+Whenever we need to basically get some data out of an object or out of an array.
+
+50
+00:03:57,510 --> 00:04:02,670
+So for example, let's say we needed the title and the author of a certain book.
+
+51
+00:04:02,670 --> 00:04:09,900
+And to demonstrate this, let's actually use get book here with some ID, for example, ID to.
+
+52
+00:04:10,630 --> 00:04:13,210
+It's also called a tier just book.
+
+53
+00:04:14,820 --> 00:04:15,510
+Okay.
+
+54
+00:04:15,870 --> 00:04:19,050
+And now again, if we wanted to take the title.
+
+55
+00:04:20,250 --> 00:04:22,350
+Out of this book object.
+
+56
+00:04:22,710 --> 00:04:23,910
+So let's say.
+
+57
+00:04:24,910 --> 00:04:27,390
+We wanted to create a new variable called title.
+
+58
+00:04:27,400 --> 00:04:28,900
+We could do book.
+
+59
+00:04:30,170 --> 00:04:31,250
+Dot title.
+
+60
+00:04:32,550 --> 00:04:33,210
+Right.
+
+61
+00:04:33,210 --> 00:04:40,920
+And now using the extension, we can see that the title is the Cyberiad or something like that.
+
+62
+00:04:41,710 --> 00:04:42,400
+Right.
+
+63
+00:04:42,400 --> 00:04:51,790
+And indeed, if we go here to the book with the ID two, then we get exactly that title, right?
+
+64
+00:04:52,440 --> 00:04:55,230
+And of course, we can take other data out of this.
+
+65
+00:04:55,470 --> 00:04:58,920
+For example, let's say we wanted the author as well.
+
+66
+00:05:01,840 --> 00:05:04,990
+We would do Book dot Author.
+
+67
+00:05:07,240 --> 00:05:07,720
+And then here.
+
+68
+00:05:07,720 --> 00:05:09,250
+Let's just see that.
+
+69
+00:05:11,080 --> 00:05:11,160
+And.
+
+70
+00:05:11,200 --> 00:05:11,710
+Okay.
+
+71
+00:05:12,340 --> 00:05:16,180
+And by the way, we can also simply do console dot log.
+
+72
+00:05:16,990 --> 00:05:19,150
+Which will get a similar result.
+
+73
+00:05:20,880 --> 00:05:22,890
+So again, this author here.
+
+74
+00:05:22,890 --> 00:05:27,030
+But then we can do multiple at the same time, which can be a bit more helpful.
+
+75
+00:05:27,210 --> 00:05:32,760
+Now, reading data from the book object like this can become a little bit cumbersome, especially when
+
+76
+00:05:32,760 --> 00:05:35,730
+we have lots of properties that we need to take out.
+
+77
+00:05:35,760 --> 00:05:39,780
+Then we would have to write one line of code for each of these properties.
+
+78
+00:05:39,930 --> 00:05:41,910
+So that's really not ideal.
+
+79
+00:05:41,910 --> 00:05:44,910
+And so that's why we have object Destructuring.
+
+80
+00:05:45,600 --> 00:05:50,880
+So with object Destructuring, we can simply create these new variables all at once.
+
+81
+00:05:51,240 --> 00:05:53,100
+So let's again say title.
+
+82
+00:05:53,660 --> 00:05:54,800
+And author.
+
+83
+00:05:55,510 --> 00:05:59,740
+And right now vs code is complaining because we're already defining them up here.
+
+84
+00:05:59,740 --> 00:06:01,540
+But never mind that for now.
+
+85
+00:06:02,450 --> 00:06:08,840
+And so then here we simply specify the object out of which we want to take the title and the author.
+
+86
+00:06:09,870 --> 00:06:11,060
+And that's actually it.
+
+87
+00:06:11,070 --> 00:06:16,620
+So let's comment out these two and then we see that we get the exact same results down here.
+
+88
+00:06:17,670 --> 00:06:23,520
+Now here, what's crucial is that we actually give these variable names here exactly the same name as
+
+89
+00:06:23,520 --> 00:06:25,360
+the properties in the object.
+
+90
+00:06:25,380 --> 00:06:29,640
+So if we had titles here, then that would not work.
+
+91
+00:06:32,020 --> 00:06:34,570
+So you see that it would then be undefined here.
+
+92
+00:06:34,570 --> 00:06:38,710
+And that's because there is no titles property in the book object.
+
+93
+00:06:41,670 --> 00:06:41,800
+No.
+
+94
+00:06:41,870 --> 00:06:42,410
+Okay.
+
+95
+00:06:42,420 --> 00:06:48,570
+So really, really helpful all the time, especially whenever we get some data from an API, which is
+
+96
+00:06:48,570 --> 00:06:52,380
+basically what we're simulating here with this get book function.
+
+97
+00:06:52,620 --> 00:06:58,050
+So this is of course not an asynchronous function, but it simulates that we're getting this book from
+
+98
+00:06:58,050 --> 00:07:01,770
+some kind of API that's abstracted behind this function.
+
+99
+00:07:02,070 --> 00:07:07,980
+And so then once we get that data, usually as an object, we can then destructure all the properties
+
+100
+00:07:08,010 --> 00:07:09,840
+out of there that we need.
+
+101
+00:07:10,350 --> 00:07:14,850
+And actually let's take out some more properties, Let's do pages.
+
+102
+00:07:15,710 --> 00:07:17,660
+Let's do the publication date.
+
+103
+00:07:19,990 --> 00:07:22,150
+Let's do the genres.
+
+104
+00:07:23,880 --> 00:07:28,800
+I think that's what it's called and then has movie.
+
+105
+00:07:30,960 --> 00:07:32,130
+Adaptation.
+
+106
+00:07:33,460 --> 00:07:34,180
+All right.
+
+107
+00:07:34,990 --> 00:07:36,610
+So again, let's just.
+
+108
+00:07:38,210 --> 00:07:42,800
+Basically lock the book here so that we can have it here on this left sidebar.
+
+109
+00:07:42,800 --> 00:07:48,500
+And so then here with this, we can easily see all the properties that are inside the book object.
+
+110
+00:07:48,500 --> 00:07:54,860
+And so these ones are the ones that I'm taking out now basically out of the book and storing them into
+
+111
+00:07:54,860 --> 00:07:56,150
+their own variables.
+
+112
+00:07:56,450 --> 00:07:59,330
+So there's no need to log all of them here now.
+
+113
+00:08:01,120 --> 00:08:06,000
+Okay, so this is how Destructuring works in a nutshell for objects.
+
+114
+00:08:06,010 --> 00:08:10,240
+There's actually some more stuff that we can do, but I will not go into that here.
+
+115
+00:08:10,600 --> 00:08:15,910
+And instead, let's now move on to Destructuring with arrays, which is pretty similar.
+
+116
+00:08:15,910 --> 00:08:22,630
+But instead of relying on the property names, it simply relies on the order of the elements in the
+
+117
+00:08:22,630 --> 00:08:23,260
+array.
+
+118
+00:08:23,440 --> 00:08:27,490
+So for this example, let's work with the genres array.
+
+119
+00:08:27,940 --> 00:08:29,590
+So we'll just lock it here.
+
+120
+00:08:31,750 --> 00:08:34,780
+So that we can see what this array looks like.
+
+121
+00:08:37,430 --> 00:08:43,220
+So this is the array that we're going to work with, and it has all these five genres that the book
+
+122
+00:08:43,220 --> 00:08:44,080
+belongs to.
+
+123
+00:08:44,090 --> 00:08:49,790
+And so let's say that these genres right here are basically ordered by importance.
+
+124
+00:08:49,790 --> 00:08:56,420
+And so the primary genre is this one, this one is the secondary one, and these other ones are not
+
+125
+00:08:56,420 --> 00:08:57,290
+that important.
+
+126
+00:08:59,410 --> 00:09:02,770
+So let's say that we wanted to create a variable called.
+
+127
+00:09:03,570 --> 00:09:04,530
+Primary.
+
+128
+00:09:05,610 --> 00:09:06,120
+Genre.
+
+129
+00:09:07,390 --> 00:09:09,580
+I'm not sure if I'm saying that right.
+
+130
+00:09:10,930 --> 00:09:13,030
+But that doesn't really matter.
+
+131
+00:09:15,700 --> 00:09:21,010
+So we could do genres and then taking out the first element.
+
+132
+00:09:21,010 --> 00:09:25,810
+And then for the secondary genre, we could simply do this.
+
+133
+00:09:30,270 --> 00:09:31,620
+Let's log it to the console.
+
+134
+00:09:31,620 --> 00:09:36,610
+And here again, I'm using that snippet that we defined in the previous section.
+
+135
+00:09:36,690 --> 00:09:37,800
+Remember that?
+
+136
+00:09:38,550 --> 00:09:42,600
+So primary genre and the secondary one.
+
+137
+00:09:42,720 --> 00:09:46,290
+And so indeed, we get science fiction and humor.
+
+138
+00:09:47,450 --> 00:09:51,530
+But again, this can be done in a better way using the structuring.
+
+139
+00:09:55,510 --> 00:09:58,750
+So let's using destructuring.
+
+140
+00:09:59,480 --> 00:10:01,340
+So defining some variables.
+
+141
+00:10:01,370 --> 00:10:07,490
+And then here, instead of the curly brackets for the object, we use the square brackets, which is
+
+142
+00:10:07,490 --> 00:10:08,900
+how we define arrays.
+
+143
+00:10:09,870 --> 00:10:10,820
+Now here.
+
+144
+00:10:10,820 --> 00:10:13,580
+Primary genre and secondary.
+
+145
+00:10:15,640 --> 00:10:17,710
+And then simply equal.
+
+146
+00:10:18,620 --> 00:10:19,190
+Generous.
+
+147
+00:10:22,380 --> 00:10:23,490
+Give it a save.
+
+148
+00:10:23,520 --> 00:10:26,640
+And then here we have the exact same result.
+
+149
+00:10:27,520 --> 00:10:33,640
+So basically the first variable that we define here in this in this way, in this destructuring will
+
+150
+00:10:33,640 --> 00:10:37,800
+take the first element out of the array and assign it to this variable.
+
+151
+00:10:37,810 --> 00:10:40,300
+And then here, of course, the second one.
+
+152
+00:10:40,300 --> 00:10:45,310
+So it takes the second element out of the array and assigns it to this variable.
+
+153
+00:10:45,310 --> 00:10:47,290
+And of course we could keep going.
+
+154
+00:10:47,290 --> 00:10:51,400
+But here we are only interested in the primary and in the secondary genre.
+
+155
+00:10:51,400 --> 00:10:55,690
+So we take these two out of this array by using array destructuring.

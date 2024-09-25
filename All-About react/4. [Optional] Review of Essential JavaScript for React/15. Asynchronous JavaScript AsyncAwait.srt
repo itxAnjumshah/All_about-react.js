@@ -1,0 +1,387 @@
+1
+00:00:00,870 --> 00:00:06,690
+So in the previous lecture we learned how to handle fetching data using promise methods.
+
+2
+00:00:06,690 --> 00:00:12,660
+But in this lecture, let's take it one step further and learn how to do the exact same thing with a
+
+3
+00:00:12,660 --> 00:00:16,080
+much nicer and cleaner syntax called async await.
+
+4
+00:00:17,180 --> 00:00:24,890
+So this syntax that we just learned here works really well, but it's not the most easy thing to work
+
+5
+00:00:24,890 --> 00:00:25,270
+with.
+
+6
+00:00:25,280 --> 00:00:28,850
+I would say it's not the most beautiful code in a way.
+
+7
+00:00:28,850 --> 00:00:36,980
+And so we can basically implement this logic here in a different way using async functions in the await
+
+8
+00:00:36,980 --> 00:00:37,850
+keyword.
+
+9
+00:00:38,030 --> 00:00:45,050
+Now, everything I explained to you in the previous lecture is still 100% valid and the whole idea behind
+
+10
+00:00:45,050 --> 00:00:46,910
+promises doesn't go away.
+
+11
+00:00:46,940 --> 00:00:52,040
+The only thing that's going to go away is these den handlers right here.
+
+12
+00:00:52,040 --> 00:00:56,510
+So we're going to again do it in a cleaner way.
+
+13
+00:00:58,280 --> 00:01:03,440
+So now instead of just doing it like this, let's create an async function.
+
+14
+00:01:03,980 --> 00:01:09,140
+So that's simply a function with the async keyword before it.
+
+15
+00:01:10,240 --> 00:01:11,050
+And then let's.
+
+16
+00:01:11,670 --> 00:01:15,360
+Call it or get to dos.
+
+17
+00:01:20,950 --> 00:01:29,860
+Okay, then let's just grab this part here and I will actually now comment all of this out here.
+
+18
+00:01:32,650 --> 00:01:32,850
+No.
+
+19
+00:01:32,860 --> 00:01:33,550
+Okay.
+
+20
+00:01:33,790 --> 00:01:39,460
+And so now we can, inside the async function, await this.
+
+21
+00:01:39,490 --> 00:01:42,520
+So await this promise immediately right here.
+
+22
+00:01:42,520 --> 00:01:49,150
+And what will happen then is that actually inside this async function, JavaScript will not immediately
+
+23
+00:01:49,150 --> 00:01:52,390
+move on to the next line like it usually does.
+
+24
+00:01:52,750 --> 00:01:59,080
+So as I explained in the previous lecture, JavaScript by default will always immediately move on to
+
+25
+00:01:59,080 --> 00:01:59,860
+the next line.
+
+26
+00:01:59,860 --> 00:02:03,330
+It never waits for anyone basically.
+
+27
+00:02:03,340 --> 00:02:09,160
+So here, as we fetch it will then immediately move here, move here and move here.
+
+28
+00:02:09,160 --> 00:02:15,490
+It will of course not execute these callback functions, but it will basically register them.
+
+29
+00:02:15,520 --> 00:02:16,930
+That's not really important.
+
+30
+00:02:16,930 --> 00:02:21,100
+But what is important is that we saw that immediately.
+
+31
+00:02:21,100 --> 00:02:27,340
+This code here was logged to the console so way before the data from the API actually arrived.
+
+32
+00:02:27,340 --> 00:02:34,340
+But now with the await keyword inside the async functions for the first time in JavaScript, we do actually
+
+33
+00:02:34,340 --> 00:02:39,500
+have a way of stopping and of pausing the code inside a function.
+
+34
+00:02:39,500 --> 00:02:47,390
+And by doing this it makes the function looks a lot more normal again and a lot more like normal synchronous
+
+35
+00:02:47,390 --> 00:02:48,470
+JavaScript code.
+
+36
+00:02:49,080 --> 00:02:55,740
+Because then we can very simply store the result of this year into a variable.
+
+37
+00:02:57,700 --> 00:02:59,710
+So let's again call it response.
+
+38
+00:02:59,710 --> 00:03:02,140
+And it's the exact same name as before.
+
+39
+00:03:02,500 --> 00:03:09,700
+So here we call the response arrays inside this callback function because, well, the response of the
+
+40
+00:03:09,700 --> 00:03:13,950
+Fed is the data that is passed into this callback.
+
+41
+00:03:13,960 --> 00:03:17,130
+So basically the response is this address.
+
+42
+00:03:17,140 --> 00:03:24,820
+So here we can immediately and directly call it like this in a way that is a lot more legible and a
+
+43
+00:03:24,820 --> 00:03:27,070
+lot more easy to understand.
+
+44
+00:03:28,100 --> 00:03:29,960
+And the same thing then with the data.
+
+45
+00:03:32,440 --> 00:03:36,220
+So we can immediately call it data and then simply await.
+
+46
+00:03:36,920 --> 00:03:37,610
+Rest.
+
+47
+00:03:38,690 --> 00:03:39,440
+Dot Json.
+
+48
+00:03:39,830 --> 00:03:42,260
+And then we can log it to the console.
+
+49
+00:03:43,990 --> 00:03:45,610
+Just like this.
+
+50
+00:03:45,970 --> 00:03:49,180
+And then we can call that function out here.
+
+51
+00:03:53,150 --> 00:03:54,890
+And there we go.
+
+52
+00:03:55,010 --> 00:03:59,810
+So here we get all this data that we had before again.
+
+53
+00:04:01,940 --> 00:04:06,470
+But of course, that waiting only works inside this async function.
+
+54
+00:04:06,470 --> 00:04:12,770
+So if here we again logged Jonas to the console, you would see that Jonas, of course, needs to be
+
+55
+00:04:12,770 --> 00:04:18,260
+logged again before because, well, JavaScript here simply defines the function.
+
+56
+00:04:18,260 --> 00:04:23,960
+Then it arrives here, it calls the function and immediately it moves on to the next line.
+
+57
+00:04:23,960 --> 00:04:30,260
+But this function here, while being executed, does actually wait, but only here inside this async
+
+58
+00:04:30,260 --> 00:04:34,520
+function and only in the lines that have this await keyword.
+
+59
+00:04:35,220 --> 00:04:41,400
+So what do you think would happen if we actually would try to return something from here and store it
+
+60
+00:04:41,400 --> 00:04:42,450
+into a variable?
+
+61
+00:04:44,090 --> 00:04:46,130
+So like returning these posts?
+
+62
+00:04:46,550 --> 00:04:48,320
+Well, that's not correct.
+
+63
+00:04:48,920 --> 00:04:49,700
+Or actually, yeah.
+
+64
+00:04:49,730 --> 00:04:50,150
+Data.
+
+65
+00:04:50,150 --> 00:04:52,070
+It's called data right here.
+
+66
+00:04:53,120 --> 00:04:56,360
+Now let's try to store that here into some variable.
+
+67
+00:04:56,600 --> 00:04:59,690
+So todos equal, get todos.
+
+68
+00:05:01,870 --> 00:05:05,260
+So what do you think would be locked to the console right here?
+
+69
+00:05:06,520 --> 00:05:08,100
+Well, we can see it here.
+
+70
+00:05:08,110 --> 00:05:09,790
+It is a promise.
+
+71
+00:05:10,030 --> 00:05:12,040
+So what's going on here?
+
+72
+00:05:12,400 --> 00:05:14,770
+Well, it's the same thing as before.
+
+73
+00:05:15,520 --> 00:05:20,500
+Right after this function is being called JavaScript immediately moves on to the next line.
+
+74
+00:05:20,500 --> 00:05:22,030
+It does not wait.
+
+75
+00:05:22,030 --> 00:05:28,420
+And so at this point here, JavaScript has no way of knowing yet what these two dos are going to be.
+
+76
+00:05:28,420 --> 00:05:37,210
+And so simply to dos is a promise, which means that the result value of this async function is always
+
+77
+00:05:37,210 --> 00:05:38,500
+just a promise.
+
+78
+00:05:38,500 --> 00:05:45,190
+And this is a fundamental piece of knowledge that you need to have in order to work with async functions
+
+79
+00:05:45,190 --> 00:05:52,990
+and with asynchronous data in general in JavaScript, because now if you want it to actually get these
+
+80
+00:05:52,990 --> 00:06:00,070
+todos out here, you would again have to use the then method on here, or you would have to use another
+
+81
+00:06:00,070 --> 00:06:01,540
+async await function.
+
+82
+00:06:01,540 --> 00:06:05,800
+Now you have another promise in your hands here that you need to handle.
+
+83
+00:06:05,800 --> 00:06:12,940
+But fortunately for us in React, that's not very common because usually what we want, as soon as we
+
+84
+00:06:12,940 --> 00:06:19,280
+receive some data, is to set the state so that we would do immediately here in this async function
+
+85
+00:06:19,280 --> 00:06:22,910
+and then we wouldn't usually return anything here.
+
+86
+00:06:22,910 --> 00:06:28,850
+So this was just again, showing you the synchronous and asynchronous nature of JavaScript.
+
+87
+00:06:28,940 --> 00:06:35,030
+So if you want to understand this a bit better, then you can go ahead and compare these two solutions
+
+88
+00:06:35,030 --> 00:06:43,040
+here which achieve the exact same thing and see how they are different and how, at least in my opinion,
+
+89
+00:06:43,040 --> 00:06:47,450
+this one is a lot nicer because it looks again like a normal function.
+
+90
+00:06:48,100 --> 00:06:50,470
+While this one here does not really.
+
+91
+00:06:50,470 --> 00:06:58,330
+So here you can easily store the result of the awaited data immediately into some variables and then
+
+92
+00:06:58,360 --> 00:07:02,590
+use them in a flow that looks just like synchronous code.
+
+93
+00:07:02,910 --> 00:07:03,700
+Now, okay.
+
+94
+00:07:03,700 --> 00:07:10,120
+And with this we actually finish our review of essential JavaScript for React section.
+
+95
+00:07:10,480 --> 00:07:17,140
+So hopefully this brought you up to speed with all the JavaScript that you need to know to be able to
+
+96
+00:07:17,140 --> 00:07:19,480
+now successfully complete this course.
+
+97
+00:07:19,480 --> 00:07:27,460
+And so now the time has actually come to really move on to the actual complete and ultimate React course.

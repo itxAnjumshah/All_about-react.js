@@ -1,0 +1,671 @@
+1
+00:00:00,840 --> 00:00:01,650
+In React.
+
+2
+00:00:01,650 --> 00:00:09,150
+Many operations need to be immutable, so operations where we do not manipulate the underlying data
+
+3
+00:00:09,150 --> 00:00:09,990
+structure.
+
+4
+00:00:10,110 --> 00:00:17,160
+And so therefore it's quite important to know how to add element to arrays, how to delete elements
+
+5
+00:00:17,160 --> 00:00:23,790
+and also to update elements all without mutating the original underlying array.
+
+6
+00:00:24,870 --> 00:00:30,810
+Now, these techniques that we're going to learn here are absolutely essential for React development.
+
+7
+00:00:30,810 --> 00:00:34,530
+But the good news is that they always work in the same way.
+
+8
+00:00:34,530 --> 00:00:41,220
+And so if you understand here how it works, then you will be well prepared for the rest of the course.
+
+9
+00:00:41,940 --> 00:00:48,480
+So as I mentioned, what we want to do here is to learn how to add elements, how to delete elements,
+
+10
+00:00:48,480 --> 00:00:53,740
+and how to update elements of an array without changing the original one.
+
+11
+00:00:53,760 --> 00:00:59,180
+And so once again, we are going to work with our array of books.
+
+12
+00:00:59,190 --> 00:01:03,680
+So an array of objects, which really is the most common thing.
+
+13
+00:01:03,690 --> 00:01:10,290
+So the most common data structure that we're going to find when we work with data on the front end.
+
+14
+00:01:12,660 --> 00:01:14,610
+So let's say first.
+
+15
+00:01:16,220 --> 00:01:18,650
+Add a book object.
+
+16
+00:01:21,540 --> 00:01:22,590
+To array.
+
+17
+00:01:23,490 --> 00:01:27,710
+Let's start by creating this new book object here, actually.
+
+18
+00:01:29,280 --> 00:01:32,940
+So this one is going to be the number six here.
+
+19
+00:01:33,750 --> 00:01:34,500
+The title.
+
+20
+00:01:36,420 --> 00:01:37,260
+Should be.
+
+21
+00:01:39,430 --> 00:01:41,140
+Harry Potter and.
+
+22
+00:01:42,200 --> 00:01:46,100
+The Chamber of Secrets.
+
+23
+00:01:46,460 --> 00:01:47,630
+Secrets.
+
+24
+00:01:48,800 --> 00:01:51,230
+What is still wrong.
+
+25
+00:01:53,040 --> 00:01:54,990
+And then the author.
+
+26
+00:01:55,810 --> 00:01:56,770
+Is J.
+
+27
+00:01:57,150 --> 00:01:57,940
+K.
+
+28
+00:01:58,700 --> 00:01:59,450
+Rolling.
+
+29
+00:01:59,450 --> 00:02:03,020
+So we already have one Harry Potter book in the array.
+
+30
+00:02:03,740 --> 00:02:05,570
+And so now here we add another one.
+
+31
+00:02:06,620 --> 00:02:13,940
+And in fact, we did already learn how we create a new array based on an original array and then adding
+
+32
+00:02:13,940 --> 00:02:15,080
+some other element.
+
+33
+00:02:15,770 --> 00:02:21,050
+So we talked about that right at the beginning of this section when we talked about the spread.
+
+34
+00:02:21,080 --> 00:02:21,970
+Operator.
+
+35
+00:02:21,980 --> 00:02:23,090
+Remember that?
+
+36
+00:02:24,160 --> 00:02:27,670
+So let's say books then after.
+
+37
+00:02:28,890 --> 00:02:31,650
+Adding, let's say, or after Add.
+
+38
+00:02:33,430 --> 00:02:41,740
+And so all we need to do is to spread all the books here into this newly created array and then simply
+
+39
+00:02:41,740 --> 00:02:42,340
+add.
+
+40
+00:02:43,020 --> 00:02:43,650
+Another book.
+
+41
+00:02:43,650 --> 00:02:44,910
+So another object.
+
+42
+00:02:47,130 --> 00:02:49,740
+And then if we take a look at this.
+
+43
+00:02:51,980 --> 00:02:52,820
+Right here.
+
+44
+00:02:52,820 --> 00:02:53,360
+You see that?
+
+45
+00:02:53,360 --> 00:02:54,860
+Now we have six of them.
+
+46
+00:02:54,860 --> 00:02:58,630
+And the last one is this one that we just created.
+
+47
+00:02:58,670 --> 00:03:01,880
+And again, we could add this also to the beginning.
+
+48
+00:03:02,680 --> 00:03:03,790
+So right here.
+
+49
+00:03:03,940 --> 00:03:08,860
+But it's most common to simply add a new book right to the end of the array.
+
+50
+00:03:09,220 --> 00:03:11,290
+So this one was quite easy.
+
+51
+00:03:12,020 --> 00:03:14,450
+Now let's delete a book.
+
+52
+00:03:14,690 --> 00:03:16,820
+So delete a book.
+
+53
+00:03:18,820 --> 00:03:20,440
+Object from array.
+
+54
+00:03:20,920 --> 00:03:26,700
+So again, this is always going to work in the exact same way, no matter how the objects look like.
+
+55
+00:03:26,710 --> 00:03:30,280
+Well, as long as they have an ID, which they usually have.
+
+56
+00:03:31,000 --> 00:03:35,830
+So now let's create a new array again.
+
+57
+00:03:37,010 --> 00:03:38,360
+So always new arrays.
+
+58
+00:03:38,360 --> 00:03:43,310
+We need always to not mutate anything but create new arrays.
+
+59
+00:03:43,490 --> 00:03:49,010
+Now, in practice, these operations would be abstracted away into some functions.
+
+60
+00:03:49,010 --> 00:03:57,200
+So, for example, we would create a function called add book and delete book and update book instead
+
+61
+00:03:57,200 --> 00:04:00,170
+of creating all these arrays like this.
+
+62
+00:04:00,170 --> 00:04:03,890
+But of course, this is just to illustrate the idea and the technique.
+
+63
+00:04:04,700 --> 00:04:05,450
+All right.
+
+64
+00:04:06,140 --> 00:04:13,010
+So books after delete will be a new array after deleting one of the book objects.
+
+65
+00:04:13,280 --> 00:04:21,350
+So we will basically now create a new array based on books after Add, which we just created, and now
+
+66
+00:04:21,350 --> 00:04:24,530
+we are going to use one of our array methods.
+
+67
+00:04:24,530 --> 00:04:27,410
+And so let's together think about this.
+
+68
+00:04:27,620 --> 00:04:29,630
+So we want to delete a book.
+
+69
+00:04:29,630 --> 00:04:34,040
+And so after deleting, the array will be shorter than before.
+
+70
+00:04:34,040 --> 00:04:38,990
+And so which of the array methods makes an array shorter than it was before?
+
+71
+00:04:39,610 --> 00:04:41,130
+Well, that's right.
+
+72
+00:04:41,140 --> 00:04:43,030
+It's the filter array.
+
+73
+00:04:43,300 --> 00:04:43,870
+Right.
+
+74
+00:04:43,870 --> 00:04:48,460
+So when we filter out something, then the new array will be shorter.
+
+75
+00:04:48,850 --> 00:04:51,460
+So let's filter.
+
+76
+00:04:52,620 --> 00:04:55,650
+And once again, each element here is a book.
+
+77
+00:04:57,280 --> 00:05:01,500
+And so in this case, let's say we want to delete the book with the ID number three.
+
+78
+00:05:01,510 --> 00:05:09,130
+And so we can say book.id is different from three.
+
+79
+00:05:09,490 --> 00:05:10,900
+And that's actually it.
+
+80
+00:05:14,080 --> 00:05:15,670
+Let's take a look at that.
+
+81
+00:05:16,700 --> 00:05:20,410
+So this one has id2 and the next one has number four.
+
+82
+00:05:20,420 --> 00:05:22,700
+So three is no longer there.
+
+83
+00:05:23,690 --> 00:05:24,380
+Great.
+
+84
+00:05:24,380 --> 00:05:26,000
+So why did this work?
+
+85
+00:05:26,090 --> 00:05:29,720
+Well, because of what we already learned before.
+
+86
+00:05:29,840 --> 00:05:37,040
+So whenever this condition here in the callback returns a false value, then that object will not be
+
+87
+00:05:37,040 --> 00:05:38,390
+in the final array.
+
+88
+00:05:38,600 --> 00:05:45,410
+So if we want to delete the book with the ID three, basically what we want is to include in the final
+
+89
+00:05:45,410 --> 00:05:49,550
+array all the books where the ID is different from three.
+
+90
+00:05:49,790 --> 00:05:50,570
+Right.
+
+91
+00:05:50,600 --> 00:05:57,380
+Because again, whenever this condition here is actually true, the object will end up in the final
+
+92
+00:05:57,380 --> 00:05:58,550
+filtered array.
+
+93
+00:05:58,550 --> 00:06:04,280
+And so the easiest way of thinking about this is to actually write a condition which does place the
+
+94
+00:06:04,280 --> 00:06:06,050
+objects into the new array.
+
+95
+00:06:06,200 --> 00:06:12,320
+And so again, that happens whenever the book ID is different than three because when it is three,
+
+96
+00:06:12,350 --> 00:06:14,030
+we want to delete it.
+
+97
+00:06:14,240 --> 00:06:16,610
+And so that's exactly what happened here.
+
+98
+00:06:16,910 --> 00:06:19,520
+As we saw here in the result.
+
+99
+00:06:22,020 --> 00:06:22,650
+Great.
+
+100
+00:06:22,960 --> 00:06:29,850
+And again, we would usually create a function called delete book, and then that function would receive
+
+101
+00:06:29,850 --> 00:06:33,950
+this ID here, and then here we would simply use that ID like this.
+
+102
+00:06:33,960 --> 00:06:39,060
+But here we are simply like manually deleting the one with the ID of three.
+
+103
+00:06:39,060 --> 00:06:42,240
+So again, just to illustrate how it all works.
+
+104
+00:06:42,970 --> 00:06:45,640
+And so now let's in the final stage.
+
+105
+00:06:48,900 --> 00:06:52,560
+Update a book object.
+
+106
+00:06:52,590 --> 00:06:53,910
+Well, in the array.
+
+107
+00:06:54,720 --> 00:06:58,890
+So books, let's say, after update.
+
+108
+00:07:00,070 --> 00:07:03,490
+And we're going to do it on the books after delete.
+
+109
+00:07:03,490 --> 00:07:06,940
+So it's like chaining all of this here one after another.
+
+110
+00:07:06,940 --> 00:07:11,710
+But we're we're storing the intermediate result inside variables.
+
+111
+00:07:12,420 --> 00:07:16,560
+And again, let's think about what array method we need here.
+
+112
+00:07:16,590 --> 00:07:23,250
+So after updating one of the book objects, the resulting array should have the exact same length as
+
+113
+00:07:23,250 --> 00:07:24,000
+before.
+
+114
+00:07:24,000 --> 00:07:24,870
+Right?
+
+115
+00:07:24,870 --> 00:07:29,490
+And so which method produces an array which has the same length as before?
+
+116
+00:07:30,240 --> 00:07:32,730
+Yes, that's the map method.
+
+117
+00:07:32,790 --> 00:07:34,620
+So map is our choice.
+
+118
+00:07:34,620 --> 00:07:38,760
+Whenever we want to update an object that is inside an array.
+
+119
+00:07:41,270 --> 00:07:45,410
+Okay, so here we now need our ternary operator.
+
+120
+00:07:46,000 --> 00:07:50,770
+Because we of course, don't want to do anything for most of the books.
+
+121
+00:07:50,770 --> 00:07:57,600
+We only want to update exactly one book object, which is the one with the ID that we're looking for.
+
+122
+00:07:57,610 --> 00:08:01,360
+So let's imagine we want to update the book with the ID of one.
+
+123
+00:08:01,780 --> 00:08:03,910
+Then let's say book.id.
+
+124
+00:08:04,450 --> 00:08:13,710
+If it is one, then return an updated object, which for now let's just write an empty object temporarily.
+
+125
+00:08:13,720 --> 00:08:19,000
+But if not, well, then simply return the book as it is so without any changes.
+
+126
+00:08:19,850 --> 00:08:21,290
+And that's simply book.
+
+127
+00:08:22,760 --> 00:08:23,540
+Right.
+
+128
+00:08:23,690 --> 00:08:30,680
+So let's already look at the result here just to see that something happened.
+
+129
+00:08:34,060 --> 00:08:37,840
+So again, we are trying to update the book with the ID of one.
+
+130
+00:08:37,840 --> 00:08:44,380
+And so now this one here is indeed just an empty object because this was the one where book ID was equal
+
+131
+00:08:44,380 --> 00:08:45,010
+to one.
+
+132
+00:08:46,150 --> 00:08:47,620
+So it was equal to one.
+
+133
+00:08:47,620 --> 00:08:53,140
+And so therefore then what was returned from this callback function was this empty object, which is
+
+134
+00:08:53,140 --> 00:08:54,160
+what we see here.
+
+135
+00:08:54,160 --> 00:08:58,120
+But for all the other ones, it simply returned the original object.
+
+136
+00:08:58,210 --> 00:09:00,310
+So then nothing changed.
+
+137
+00:09:01,480 --> 00:09:01,750
+No.
+
+138
+00:09:01,750 --> 00:09:02,080
+Right.
+
+139
+00:09:02,080 --> 00:09:09,790
+But of course, we don't want to return this empty object, but we want to return an object which has
+
+140
+00:09:09,790 --> 00:09:11,170
+an updated property.
+
+141
+00:09:11,170 --> 00:09:14,620
+And in fact, we already learned how to do that.
+
+142
+00:09:14,650 --> 00:09:17,410
+Way back again using the spread operator.
+
+143
+00:09:18,040 --> 00:09:23,080
+So remember, we simply spread out the current book object into this object.
+
+144
+00:09:23,110 --> 00:09:25,180
+So this newly created object.
+
+145
+00:09:25,180 --> 00:09:32,230
+So we take basically all of the properties into this new object and then we can simply overwrite one
+
+146
+00:09:32,230 --> 00:09:32,800
+of them.
+
+147
+00:09:33,680 --> 00:09:35,630
+Let's say we want pages again.
+
+148
+00:09:35,630 --> 00:09:36,440
+12.
+
+149
+00:09:37,150 --> 00:09:38,380
+110.
+
+150
+00:09:38,920 --> 00:09:43,000
+Let's just do something a bit more dramatic just to see the result a bit better.
+
+151
+00:09:44,060 --> 00:09:44,930
+And so.
+
+152
+00:09:46,240 --> 00:09:46,860
+Yeah.
+
+153
+00:09:46,870 --> 00:09:53,380
+Now we have only one page here while everything else again remains unaffected.
+
+154
+00:09:54,860 --> 00:09:57,140
+Let's put it to 1210.
+
+155
+00:09:57,170 --> 00:09:58,310
+And there we go.
+
+156
+00:09:59,270 --> 00:10:03,560
+So we updated one property in one object of the array.
+
+157
+00:10:03,560 --> 00:10:06,830
+And this is again something that we do all the time.
+
+158
+00:10:06,830 --> 00:10:11,690
+And so you just basically need to memorize this recipe right here.
+
+159
+00:10:12,140 --> 00:10:19,550
+So when we want to add a new object to an array, we do this, we create a new array, spread the current
+
+160
+00:10:19,550 --> 00:10:21,710
+elements, and add the new element.
+
+161
+00:10:21,740 --> 00:10:28,130
+When we want to delete one, we use filter because filter makes the resulting array shorter.
+
+162
+00:10:28,490 --> 00:10:33,710
+Then we simply keep all the book elements.
+
+163
+00:10:33,710 --> 00:10:39,950
+So all the book objects where the ID is different than the one we want to delete and to update.
+
+164
+00:10:39,980 --> 00:10:46,160
+We use the map method because the map method creates an array which has the exact same length as the
+
+165
+00:10:46,160 --> 00:10:46,970
+original.
+
+166
+00:10:46,970 --> 00:10:54,260
+And so then when we are at the ID that we're looking for so that we want to manipulate, then we create
+
+167
+00:10:54,260 --> 00:10:58,980
+a new object and overwrite the property that we want to manipulate.
+
+168
+00:10:58,980 --> 00:11:03,600
+And for all the other books, we simply return the book unchanged.

@@ -1,0 +1,35 @@
+1
+00:00:01,140 --> 00:00:08,970
+React is a JavaScript library and therefore you will need a good understanding of some essential JavaScript
+
+2
+00:00:08,970 --> 00:00:10,110
+fundamentals.
+
+3
+00:00:10,290 --> 00:00:16,080
+So if your JavaScript is a bit rusty, then this section is for you.
+
+4
+00:00:16,740 --> 00:00:24,360
+So we're going to review topics such as the structuring, the spread operator template, literals Ternaries
+
+5
+00:00:24,360 --> 00:00:29,370
+and asynchronous JavaScript with promises and async await.
+
+6
+00:00:29,640 --> 00:00:36,050
+Now one of the things we do all the time in React is to work with immutable arrays.
+
+7
+00:00:36,060 --> 00:00:43,590
+And so we will spend some time with the important array methods, map filter, reduce and sort.
+
+8
+00:00:44,010 --> 00:00:51,390
+Now if you already know all these things, then please feel free to just skip this entire section and
+
+9
+00:00:51,390 --> 00:00:53,430
+move right to the next one.

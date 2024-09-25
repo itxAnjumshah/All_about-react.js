@@ -1,0 +1,287 @@
+1
+00:00:00,930 --> 00:00:05,820
+In this video, let's quickly get ourselves familiar with arrow functions.
+
+2
+00:00:07,080 --> 00:00:14,190
+So arrow functions are a new way of writing functions that have been introduced into JavaScript in ES6,
+
+3
+00:00:14,190 --> 00:00:19,180
+and they are very helpful for writing quick and short one line functions.
+
+4
+00:00:19,200 --> 00:00:25,800
+Now many people actually use arrow functions for all functions now, but I personally really don't like
+
+5
+00:00:25,800 --> 00:00:32,370
+that and I only find them useful for well, as I said, these one liner functions.
+
+6
+00:00:32,550 --> 00:00:38,100
+So let's say that we want to write a function which automatically does this part here.
+
+7
+00:00:38,100 --> 00:00:42,150
+So it takes in a value that is supposed to be a date and we'll get the year.
+
+8
+00:00:42,180 --> 00:00:48,060
+So based on this convention, that or dates are always written in this format right here.
+
+9
+00:00:48,060 --> 00:00:50,730
+So date dash month.
+
+10
+00:00:50,730 --> 00:00:51,660
+Dash day.
+
+11
+00:00:54,250 --> 00:01:00,640
+So the let's say, old way of writing that would be simply to use the function keyword.
+
+12
+00:01:03,400 --> 00:01:04,750
+Then let's say get here.
+
+13
+00:01:05,620 --> 00:01:09,190
+And it receives a string and then we can return.
+
+14
+00:01:09,970 --> 00:01:11,260
+Just like we did up here.
+
+15
+00:01:11,260 --> 00:01:14,140
+Let's actually copy this to make it a bit faster.
+
+16
+00:01:16,350 --> 00:01:17,610
+And then we could use.
+
+17
+00:01:20,160 --> 00:01:21,990
+Get year.
+
+18
+00:01:22,780 --> 00:01:26,740
+With, for example, the publication date that we already have.
+
+19
+00:01:26,740 --> 00:01:30,520
+And so this results in 1965, just as we have here.
+
+20
+00:01:31,540 --> 00:01:37,270
+So this is the traditional way of writing functions, which I still use all the time for longer functions.
+
+21
+00:01:37,270 --> 00:01:39,850
+But now we also have arrow functions.
+
+22
+00:01:40,000 --> 00:01:42,550
+So let's see how we write an arrow function.
+
+23
+00:01:43,870 --> 00:01:47,620
+So the function is basically simply the argument.
+
+24
+00:01:48,640 --> 00:01:49,680
+Dandy arrow.
+
+25
+00:01:49,690 --> 00:01:51,070
+And then what?
+
+26
+00:01:51,070 --> 00:01:52,090
+We want to return.
+
+27
+00:01:53,280 --> 00:01:55,500
+What is Dot split?
+
+28
+00:01:57,360 --> 00:01:59,250
+And then the first element.
+
+29
+00:01:59,970 --> 00:02:00,700
+And that's it.
+
+30
+00:02:00,720 --> 00:02:03,030
+This is a function.
+
+31
+00:02:03,150 --> 00:02:08,910
+And maybe you noticed that the prettier extension that we're using in this course did automatically
+
+32
+00:02:08,910 --> 00:02:12,060
+wrap this parameter here inside these parentheses.
+
+33
+00:02:12,060 --> 00:02:18,540
+And that's because we can actually specify multiple arguments or parameters and then we really need
+
+34
+00:02:18,540 --> 00:02:20,010
+to use the parentheses.
+
+35
+00:02:20,010 --> 00:02:25,590
+And so that's why Prettier placed them there because like this, we cannot make any mistakes.
+
+36
+00:02:26,590 --> 00:02:31,230
+So we could really pass any number of parameters here in that we want it.
+
+37
+00:02:31,240 --> 00:02:34,870
+And then based off those, we can then return something.
+
+38
+00:02:34,960 --> 00:02:42,550
+So again, this part here is automatically returned without us having to write the return keyword explicitly.
+
+39
+00:02:44,910 --> 00:02:45,540
+Okay.
+
+40
+00:02:46,370 --> 00:02:54,290
+So let's just turn this one here off because now we want to reuse this get year name because right now
+
+41
+00:02:54,290 --> 00:02:59,210
+this is a function, but we cannot really use it because we haven't stored it anywhere.
+
+42
+00:03:00,680 --> 00:03:08,840
+So we can just do this const get year and then store that function value into this variable here.
+
+43
+00:03:08,990 --> 00:03:12,710
+And so this then becomes a so-called function expression as well.
+
+44
+00:03:12,710 --> 00:03:15,620
+While this one here is a function declaration.
+
+45
+00:03:15,830 --> 00:03:20,300
+So that's a subtle difference that you might have heard about, and it's not really important.
+
+46
+00:03:20,330 --> 00:03:26,720
+What matters is that this is an error function where we automatically return whatever is here on the
+
+47
+00:03:26,720 --> 00:03:28,280
+right side of this arrow.
+
+48
+00:03:28,580 --> 00:03:35,720
+Now, if we had more code here, so if we had multiple lines, then we would have to use a function
+
+49
+00:03:35,720 --> 00:03:36,470
+block again.
+
+50
+00:03:36,470 --> 00:03:41,870
+So using these curly braces, then we could write whatever code we needed here.
+
+51
+00:03:42,230 --> 00:03:46,280
+And then in the end, we would actually have to manually return again.
+
+52
+00:03:46,870 --> 00:03:49,190
+So this one would also work the same way.
+
+53
+00:03:49,210 --> 00:03:51,520
+So you see that we have the result here.
+
+54
+00:03:51,640 --> 00:03:57,460
+But if you use this block, then you really do need this return keyword again.
+
+55
+00:03:57,490 --> 00:04:00,250
+Otherwise, as you see, it returns undefined.
+
+56
+00:04:01,480 --> 00:04:06,820
+But again, the ideal way of using this function is when you really have just a one liner, then you
+
+57
+00:04:06,820 --> 00:04:10,000
+don't need a return keyword, don't need a function block.
+
+58
+00:04:10,060 --> 00:04:11,590
+All you need is this.
+
+59
+00:04:11,680 --> 00:04:18,430
+And this really becomes very useful for callback functions, for example, in some arrow methods, as
+
+60
+00:04:18,430 --> 00:04:19,510
+we will see later.
+
+61
+00:04:20,200 --> 00:04:22,480
+Now let's actually use this here.
+
+62
+00:04:22,480 --> 00:04:24,070
+So for that I will cut.
+
+63
+00:04:24,900 --> 00:04:31,740
+This part and we'll place it here before the summary, because now I want to use the get function in
+
+64
+00:04:31,740 --> 00:04:32,280
+here.
+
+65
+00:04:33,600 --> 00:04:35,070
+Also delete this part.
+
+66
+00:04:36,020 --> 00:04:39,110
+Actually, I cut it and put it here just as a reference.
+
+67
+00:04:39,320 --> 00:04:46,010
+And now here, instead of doing it manually here, we can call the function right here inside of the
+
+68
+00:04:46,010 --> 00:04:46,430
+template.
+
+69
+00:04:46,430 --> 00:04:47,120
+Literal.
+
+70
+00:04:47,880 --> 00:04:48,900
+So get here.
+
+71
+00:04:49,960 --> 00:04:52,420
+And again, publication date.
+
+72
+00:04:52,420 --> 00:04:57,100
+And the result that we get in the console is indeed exactly the same.

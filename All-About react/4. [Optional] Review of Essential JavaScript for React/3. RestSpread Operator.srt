@@ -1,0 +1,539 @@
+1
+00:00:00,880 --> 00:00:06,130
+Now moving on, let's quickly learn about the rest and the spread operator.
+
+2
+00:00:07,240 --> 00:00:13,150
+And let's go back here to this line of code where we did the Destructuring in the previous lecture.
+
+3
+00:00:13,150 --> 00:00:18,700
+So where we took out this primary genre and the secondary genre out of this array.
+
+4
+00:00:18,880 --> 00:00:23,260
+And now let's say that we also wanted to get all the other genres.
+
+5
+00:00:23,260 --> 00:00:28,480
+So the ones that are not the first and the second one into another array.
+
+6
+00:00:28,510 --> 00:00:34,660
+So basically into an array containing all the other genres and for that we can use the rest.
+
+7
+00:00:34,660 --> 00:00:35,590
+Operator.
+
+8
+00:00:35,920 --> 00:00:41,710
+So here we can simply write dot, dot, dot and then give it any name that we want.
+
+9
+00:00:42,860 --> 00:00:45,470
+So let's say other genres.
+
+10
+00:00:45,650 --> 00:00:51,800
+And so this will automatically create an array which contains all the values that we haven't previously.
+
+11
+00:00:51,800 --> 00:00:52,910
+Destructured.
+
+12
+00:00:53,960 --> 00:00:55,670
+So let's lock that here.
+
+13
+00:00:58,680 --> 00:01:01,380
+And indeed, here it is.
+
+14
+00:01:02,910 --> 00:01:10,140
+So we took out science fiction and humor, which remember is the first and the second one.
+
+15
+00:01:10,140 --> 00:01:14,850
+And then we get an array with the third, the fourth and the last one.
+
+16
+00:01:16,180 --> 00:01:18,100
+So exactly what we wanted.
+
+17
+00:01:18,130 --> 00:01:25,810
+And of course, if here we didn't have this one, then this other genres would also contain the secondary
+
+18
+00:01:25,810 --> 00:01:26,230
+genre.
+
+19
+00:01:26,800 --> 00:01:32,410
+So then only primary genre would be right here, so would be this one.
+
+20
+00:01:32,410 --> 00:01:35,740
+And then the other genres would be all the other ones.
+
+21
+00:01:37,530 --> 00:01:39,030
+No, this is not what we want.
+
+22
+00:01:39,060 --> 00:01:45,570
+So let's put it back and I'll just one important thing about this is that we can only place this here
+
+23
+00:01:45,570 --> 00:01:48,900
+in the end of the Destructuring operation.
+
+24
+00:01:49,080 --> 00:01:53,490
+So placing this like here wouldn't make a lot of sense.
+
+25
+00:01:54,730 --> 00:02:00,910
+So this immediately gives us here an error, saying that a rest element must be the last in the destructuring
+
+26
+00:02:00,910 --> 00:02:01,570
+pattern.
+
+27
+00:02:04,290 --> 00:02:11,400
+Okay, So let's again go back and that's actually it for the rest Operator.
+
+28
+00:02:12,120 --> 00:02:16,410
+Now, what's a bit confusing about this is that the same syntax?
+
+29
+00:02:16,410 --> 00:02:24,520
+So the three dots is also used for the spread operator, which is a bit more common than the rest operator.
+
+30
+00:02:24,540 --> 00:02:27,840
+So the spread operator, we use it actually all the time.
+
+31
+00:02:27,840 --> 00:02:30,330
+It's really important and, and very common.
+
+32
+00:02:30,330 --> 00:02:35,940
+And just like Destructuring, we can also use it both on arrays and objects.
+
+33
+00:02:35,940 --> 00:02:39,660
+And let's start to look here at arrays first.
+
+34
+00:02:39,990 --> 00:02:47,070
+So let's say that we want to create a new array with all the genres, but add a new one to the end.
+
+35
+00:02:47,830 --> 00:02:49,570
+So how could we do that?
+
+36
+00:02:53,900 --> 00:02:55,310
+Let's say new.
+
+37
+00:02:56,340 --> 00:02:57,230
+Genres.
+
+38
+00:02:58,800 --> 00:03:01,700
+So we want a new array, as we said, right.
+
+39
+00:03:01,710 --> 00:03:05,870
+Containing all the current genres and then another one at the end.
+
+40
+00:03:05,880 --> 00:03:10,110
+So we could try to just add genres here.
+
+41
+00:03:11,020 --> 00:03:15,880
+And then, let's say epic fantasy.
+
+42
+00:03:17,620 --> 00:03:20,450
+So let's see what that would get us.
+
+43
+00:03:20,470 --> 00:03:27,730
+But immediately we see that this is not exactly what we wanted because we now have an array which contains,
+
+44
+00:03:27,880 --> 00:03:32,380
+of course, the epic fantasy, but then also another array.
+
+45
+00:03:32,410 --> 00:03:38,230
+So we simply have the entire genres array and then the genre that we wanted to add.
+
+46
+00:03:38,260 --> 00:03:39,820
+But this is not what we want.
+
+47
+00:03:39,850 --> 00:03:44,320
+We want one array which contains all of these values here individually.
+
+48
+00:03:44,320 --> 00:03:51,310
+So all of these six genres, one by one and not one array, which contains five genres and then simply
+
+49
+00:03:51,310 --> 00:03:54,250
+the other genre in the end.
+
+50
+00:03:54,550 --> 00:03:58,840
+So what we can do is to use the spread operator.
+
+51
+00:03:59,110 --> 00:04:03,100
+So the spread operator, as I said, has the same syntax.
+
+52
+00:04:03,100 --> 00:04:06,000
+So we can simply write this here.
+
+53
+00:04:06,010 --> 00:04:13,420
+And what this will do is to basically take all the values out of the array and place them here one by
+
+54
+00:04:13,420 --> 00:04:13,990
+one.
+
+55
+00:04:14,230 --> 00:04:21,410
+So you can imagine as if this would be converted into simply writing these genres here one by one.
+
+56
+00:04:21,410 --> 00:04:24,860
+So taking them out of the array, placing them here.
+
+57
+00:04:24,860 --> 00:04:31,190
+And so since we're building a new array here, we will then get this new array which contains all these
+
+58
+00:04:31,190 --> 00:04:35,090
+individual values and at the end, epic fantasy.
+
+59
+00:04:35,630 --> 00:04:36,290
+All right.
+
+60
+00:04:36,290 --> 00:04:38,420
+So this is really, really helpful.
+
+61
+00:04:38,420 --> 00:04:41,240
+And of course, we could also place it at the end.
+
+62
+00:04:41,240 --> 00:04:46,530
+And then Epic Fantasy would simply be at the beginning of the new array.
+
+63
+00:04:46,550 --> 00:04:48,050
+So just like this.
+
+64
+00:04:49,510 --> 00:04:50,320
+Great.
+
+65
+00:04:50,470 --> 00:04:53,800
+So this is how the spread operator works with arrays.
+
+66
+00:04:53,800 --> 00:05:00,070
+But now let's move on to objects where the spread operator is even more important because it allows
+
+67
+00:05:00,070 --> 00:05:04,300
+us to add new properties and also to update existing ones.
+
+68
+00:05:05,480 --> 00:05:07,430
+So let's create a variable called.
+
+69
+00:05:08,610 --> 00:05:09,630
+Update it.
+
+70
+00:05:10,770 --> 00:05:11,310
+Book.
+
+71
+00:05:11,490 --> 00:05:12,450
+And let's say that now.
+
+72
+00:05:12,450 --> 00:05:18,330
+We wanted to create a new object based on the current book, but which has a new property.
+
+73
+00:05:18,330 --> 00:05:22,850
+And that new property, for example, can be the movie publication date.
+
+74
+00:05:22,860 --> 00:05:30,480
+So we already have a publication date property here and we also have a movie adaptation.
+
+75
+00:05:30,480 --> 00:05:37,290
+And so we can now also create a property which says one, the movie was actually published.
+
+76
+00:05:37,470 --> 00:05:42,450
+Now this book here doesn't actually have a movie, but that's not really the point here.
+
+77
+00:05:42,450 --> 00:05:43,580
+That doesn't really matter.
+
+78
+00:05:43,590 --> 00:05:46,200
+We're just learning how to do this.
+
+79
+00:05:46,380 --> 00:05:52,680
+So let's try to create this updated book object, just like we did before by using.
+
+80
+00:05:53,340 --> 00:05:57,150
+The current book object and then adding a property here.
+
+81
+00:05:58,190 --> 00:05:59,480
+Saying movie.
+
+82
+00:06:00,740 --> 00:06:01,940
+Publication.
+
+83
+00:06:03,270 --> 00:06:04,080
+Date.
+
+84
+00:06:07,280 --> 00:06:09,740
+And let's simply use this date.
+
+85
+00:06:11,420 --> 00:06:17,450
+This state is actually the publication of the movie of the First Lord of the Rings book, which I think
+
+86
+00:06:17,450 --> 00:06:18,800
+is book number one.
+
+87
+00:06:20,060 --> 00:06:22,460
+And so let's just to make this right.
+
+88
+00:06:23,210 --> 00:06:25,760
+Let's get the book number one here.
+
+89
+00:06:27,050 --> 00:06:29,650
+So you see immediately everything updates here.
+
+90
+00:06:29,660 --> 00:06:34,400
+So all these lodgings that we have, all these genres here, of course.
+
+91
+00:06:36,190 --> 00:06:38,680
+But what we're interested in here is.
+
+92
+00:06:39,440 --> 00:06:41,360
+The updated book.
+
+93
+00:06:41,690 --> 00:06:42,620
+Right.
+
+94
+00:06:42,620 --> 00:06:46,700
+And again, to inspect this, let's open up here this sidebar.
+
+95
+00:06:46,880 --> 00:06:50,890
+And just like before, this is really not what we wanted.
+
+96
+00:06:50,900 --> 00:06:58,220
+So inside this book, we now have another book property which contains the book itself, plus this new
+
+97
+00:06:58,220 --> 00:07:00,410
+movie publication, Date Property.
+
+98
+00:07:01,070 --> 00:07:02,510
+So this is not what we want.
+
+99
+00:07:02,540 --> 00:07:08,270
+Instead, we want one big object which contains all of this and this new property.
+
+100
+00:07:08,270 --> 00:07:15,260
+And so the solution, just like before, is to simply spread out all the properties of this book object
+
+101
+00:07:15,260 --> 00:07:17,300
+into the new object.
+
+102
+00:07:17,510 --> 00:07:25,730
+And immediately you see how it updated here and now everything is simply inside the updated book object.
+
+103
+00:07:26,060 --> 00:07:26,810
+Great.
+
+104
+00:07:26,810 --> 00:07:31,840
+So this is how we add new properties to an object using the spread operator.
+
+105
+00:07:31,850 --> 00:07:39,380
+But as I said in the beginning, we can also use it to basically update properties so by simply overriding
+
+106
+00:07:39,380 --> 00:07:39,830
+them.
+
+107
+00:07:40,660 --> 00:07:43,450
+So we see that we have this page's property.
+
+108
+00:07:43,450 --> 00:07:46,840
+But let's imagine for some reason that it is wrong.
+
+109
+00:07:46,840 --> 00:07:49,570
+And so we can simply overwrite that here.
+
+110
+00:07:52,160 --> 00:07:54,980
+So let's say the number of pages is actually.
+
+111
+00:07:56,690 --> 00:07:58,850
+1210.
+
+112
+00:08:00,100 --> 00:08:05,740
+So if we inspect that again, then you see that now it is actually 1210.
+
+113
+00:08:05,740 --> 00:08:12,010
+And the reason that works is because, as I mentioned in the beginning, this syntax here basically
+
+114
+00:08:12,010 --> 00:08:13,810
+takes all the elements.
+
+115
+00:08:13,810 --> 00:08:18,100
+So all the properties of the object into this new object.
+
+116
+00:08:18,100 --> 00:08:21,850
+And that of course will contain the original pages property.
+
+117
+00:08:21,850 --> 00:08:24,730
+And so then we have two pages, properties.
+
+118
+00:08:24,730 --> 00:08:29,980
+And so then the second one, so this last one will overwrite the first one.
+
+119
+00:08:30,250 --> 00:08:38,560
+So if we place this one first, which is perfectly valid, then you will see that it goes back to 1216
+
+120
+00:08:38,560 --> 00:08:46,240
+because then the pages property coming from right here is last and will therefore then overwrite this
+
+121
+00:08:46,240 --> 00:08:46,720
+one.
+
+122
+00:08:48,240 --> 00:08:53,640
+So whenever we want to do this, the spread out original object needs to be first.
+
+123
+00:08:57,250 --> 00:09:00,820
+So just writing out what we did here, adding a new property.
+
+124
+00:09:05,210 --> 00:09:05,840
+And then.
+
+125
+00:09:07,200 --> 00:09:10,080
+Overriding an existing property.
+
+126
+00:09:10,470 --> 00:09:15,840
+And I'm focusing so much here on this because this is going to be really, really important when we
+
+127
+00:09:15,840 --> 00:09:17,070
+work with React.
+
+128
+00:09:17,070 --> 00:09:23,670
+Because when we want to update objects in state, which you will learn later what that is, we will
+
+129
+00:09:23,670 --> 00:09:30,090
+need to use this technique and we will also talk about this a bit later again in this section.
+
+130
+00:09:30,090 --> 00:09:36,480
+But for now, just keep in mind that when we want to create a new object and then add new properties
+
+131
+00:09:36,480 --> 00:09:40,110
+to it or overwrite existing ones, this is how we do it.
+
+132
+00:09:40,110 --> 00:09:42,720
+So we use the spread operator.
+
+133
+00:09:42,720 --> 00:09:45,330
+And the same is true for arrays.
+
+134
+00:09:45,330 --> 00:09:46,890
+So very, very important.
+
+135
+00:09:46,890 --> 00:09:50,670
+So it's fundamental that you know this as we go through the course.

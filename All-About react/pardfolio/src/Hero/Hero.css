@@ -1,0 +1,17 @@
+.hero{
+    margin-top: 110px;
+}
+
+
+
+.hero-img img{
+    align-items: center;
+    margin: auto;
+    display: flex;
+}
+.btn-order{
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: orange;
+    
+}

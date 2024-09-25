@@ -1,0 +1,16 @@
+body{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  
+  
+}
+a{
+scroll-behavior: smooth;
+  text-decoration: none;
+ color: white;
+ scroll-behavior: smooth;
+}
+a:hover{
+  color: #d16527;
+}

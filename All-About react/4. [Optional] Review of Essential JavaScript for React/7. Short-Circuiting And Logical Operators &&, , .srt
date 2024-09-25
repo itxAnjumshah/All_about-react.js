@@ -1,0 +1,591 @@
+1
+00:00:00,880 --> 00:00:02,050
+In this lecture.
+
+2
+00:00:02,050 --> 00:00:06,940
+Let's review how short circuiting works with some logical operators.
+
+3
+00:00:08,210 --> 00:00:16,040
+So in JavaScript, some logical operators such as the End and the Or operator have a feature called
+
+4
+00:00:16,040 --> 00:00:17,480
+short circuiting.
+
+5
+00:00:17,750 --> 00:00:25,760
+So short circuiting in logical operators means that in certain conditions the operator will immediately
+
+6
+00:00:25,760 --> 00:00:30,560
+return the first value and not even look at the second value.
+
+7
+00:00:30,710 --> 00:00:33,280
+And this probably sounds confusing.
+
+8
+00:00:33,290 --> 00:00:36,500
+So of course, let's write some code here.
+
+9
+00:00:36,830 --> 00:00:44,570
+So starting with the end operator, the end operator short circuits when the first operand, so when
+
+10
+00:00:44,570 --> 00:00:49,940
+the first value is false and then will immediately return that first value.
+
+11
+00:00:50,780 --> 00:00:53,120
+So let's use a console.log here.
+
+12
+00:00:53,900 --> 00:00:55,760
+And let's do what I just said.
+
+13
+00:00:55,880 --> 00:01:01,520
+So when the first value is true, the end operator will automatically return the second operand.
+
+14
+00:01:01,550 --> 00:01:04,580
+So the second value, no matter what that is.
+
+15
+00:01:04,820 --> 00:01:06,410
+So let's say some string.
+
+16
+00:01:06,410 --> 00:01:09,800
+And so indeed, immediately we get some string here.
+
+17
+00:01:09,800 --> 00:01:14,960
+And so here we have no short circuiting the short circuiting works in the end.
+
+18
+00:01:14,990 --> 00:01:17,900
+Operator When the first value is false.
+
+19
+00:01:18,880 --> 00:01:25,570
+So here, if we have faults, then there is a short circuit and the operator does not even look at the
+
+20
+00:01:25,570 --> 00:01:26,470
+second value.
+
+21
+00:01:26,470 --> 00:01:32,200
+So instead it immediately returns the first one here, and this can be quite helpful.
+
+22
+00:01:32,230 --> 00:01:35,980
+Basically, in order to use this as an if.
+
+23
+00:01:37,940 --> 00:01:42,860
+So for example, we could do has movie adaptation and.
+
+24
+00:01:45,050 --> 00:01:45,950
+This book.
+
+25
+00:01:47,180 --> 00:01:48,290
+Has a movie.
+
+26
+00:01:48,560 --> 00:01:55,610
+And so here the operator, just like in this previous line, immediately returns this false value because
+
+27
+00:01:55,640 --> 00:01:58,700
+as we can see here, has movie adaptation is false.
+
+28
+00:01:58,700 --> 00:02:04,090
+And so the end operator short circuits and doesn't even look at this other part here.
+
+29
+00:02:04,100 --> 00:02:08,480
+But of course, if we go back to using the first book right here.
+
+30
+00:02:09,110 --> 00:02:11,740
+Then we get this book has a movie.
+
+31
+00:02:11,750 --> 00:02:15,670
+So again, this acts a little bit like an if, right?
+
+32
+00:02:15,680 --> 00:02:19,450
+And so sometimes in React, we use that to our advantage.
+
+33
+00:02:19,460 --> 00:02:24,170
+And this also works with so-called truthy and falsy values.
+
+34
+00:02:27,630 --> 00:02:34,710
+So a truthy value is basically any value that is not a falsy value and the falsy value.
+
+35
+00:02:34,980 --> 00:02:36,210
+Just write that here.
+
+36
+00:02:38,350 --> 00:02:39,520
+Is zero.
+
+37
+00:02:39,520 --> 00:02:40,930
+An empty string.
+
+38
+00:02:41,720 --> 00:02:42,530
+Null.
+
+39
+00:02:43,550 --> 00:02:44,780
+And undefined.
+
+40
+00:02:44,810 --> 00:02:48,380
+And I think there's actually one more which I can't think of right now.
+
+41
+00:02:48,620 --> 00:02:51,290
+So, yeah, these are the ones that actually matter.
+
+42
+00:02:52,260 --> 00:02:58,710
+So this one is not one of these files values and therefore it's a truthy value, which means that for
+
+43
+00:02:58,710 --> 00:03:05,850
+the end operator it is as if this was actually really a true value because basically behind the scenes
+
+44
+00:03:05,850 --> 00:03:07,950
+this gets converted to true.
+
+45
+00:03:13,110 --> 00:03:17,520
+And so since this is true, we get the second value out of the operation.
+
+46
+00:03:17,520 --> 00:03:19,890
+But if we use a falsy value.
+
+47
+00:03:21,230 --> 00:03:23,030
+Let's say zero.
+
+48
+00:03:25,180 --> 00:03:27,210
+Then we get that first one.
+
+49
+00:03:27,220 --> 00:03:32,860
+So here, once again, we have short circuiting in action because this is a falsy value.
+
+50
+00:03:34,420 --> 00:03:37,630
+All right, so that's enough for the end operator.
+
+51
+00:03:37,660 --> 00:03:42,070
+Now let's go to the Or operator, which works exactly in the opposite way.
+
+52
+00:03:42,100 --> 00:03:48,550
+So this one short circuits whenever the first operand is true and will then return it.
+
+53
+00:03:54,670 --> 00:04:02,110
+So if we have true or some string, it doesn't really matter here the word, then we immediately get
+
+54
+00:04:02,110 --> 00:04:02,680
+true.
+
+55
+00:04:03,810 --> 00:04:05,340
+But if we have faults.
+
+56
+00:04:06,380 --> 00:04:08,270
+Then we get some string.
+
+57
+00:04:08,270 --> 00:04:15,140
+And so from this example, we can see that the short circuiting happens here in this case whenever the
+
+58
+00:04:15,140 --> 00:04:16,710
+first value is true.
+
+59
+00:04:16,730 --> 00:04:17,750
+So this is true.
+
+60
+00:04:17,750 --> 00:04:21,140
+So the operator doesn't even look at the second value.
+
+61
+00:04:22,790 --> 00:04:28,430
+Now we can use this year actually to our advantage in order to set default values.
+
+62
+00:04:29,230 --> 00:04:32,620
+Let's try an example actually with the data that we're working with.
+
+63
+00:04:32,890 --> 00:04:39,670
+And let's first look at book dot translations.
+
+64
+00:04:43,370 --> 00:04:44,870
+Dot Spanish.
+
+65
+00:04:45,480 --> 00:04:48,810
+And so we get this Spanish string here.
+
+66
+00:04:49,480 --> 00:04:53,170
+And that's because we have a Spanish translation for this book.
+
+67
+00:04:53,170 --> 00:04:55,570
+But for the other book.
+
+68
+00:04:55,750 --> 00:04:58,810
+Again, book number two, I think there is none.
+
+69
+00:04:59,810 --> 00:05:01,470
+So, yeah, it's undefined.
+
+70
+00:05:01,490 --> 00:05:06,330
+And so let's say that we wanted to set a default value in case there is none.
+
+71
+00:05:06,350 --> 00:05:09,770
+So we can use the end operator for that.
+
+72
+00:05:12,390 --> 00:05:13,980
+So let's say Spanish.
+
+73
+00:05:14,720 --> 00:05:15,800
+Translation.
+
+74
+00:05:17,530 --> 00:05:19,210
+Is book.
+
+75
+00:05:19,940 --> 00:05:23,570
+Dot translations dot Spanish or.
+
+76
+00:05:24,620 --> 00:05:25,610
+Not.
+
+77
+00:05:27,520 --> 00:05:28,720
+Translate it.
+
+78
+00:05:31,890 --> 00:05:39,090
+So the result of Spanish translation right now is not translated because remember, this one was undefined
+
+79
+00:05:39,090 --> 00:05:43,130
+and undefined is one of these falsy values, right?
+
+80
+00:05:43,140 --> 00:05:51,540
+And as we saw here, when the value is false or falsy, then the end operator goes to the second part
+
+81
+00:05:51,540 --> 00:05:52,500
+of the operator.
+
+82
+00:05:52,500 --> 00:05:54,600
+So there is no short circuiting.
+
+83
+00:05:54,600 --> 00:06:01,830
+And so here we are then using that to our advantage by well, by setting this default string right here.
+
+84
+00:06:01,830 --> 00:06:08,610
+And so this is then what will become the result of this entire operation, And then it will get assigned
+
+85
+00:06:08,610 --> 00:06:09,900
+to this variable.
+
+86
+00:06:10,020 --> 00:06:16,590
+And if the book was number one, which I'm not going to do now, but yeah, you remember that it had
+
+87
+00:06:16,590 --> 00:06:17,430
+a translation.
+
+88
+00:06:17,430 --> 00:06:23,370
+And so then this here would become a truth value and then we would have short circuiting so this one
+
+89
+00:06:23,370 --> 00:06:24,540
+would not be evaluated.
+
+90
+00:06:24,540 --> 00:06:28,830
+And then the value of Spanish translation would simply be this one.
+
+91
+00:06:30,680 --> 00:06:31,280
+Great.
+
+92
+00:06:31,310 --> 00:06:39,650
+However, this can also go wrong because this works for all the falsy values such as zero as well.
+
+93
+00:06:39,890 --> 00:06:42,830
+So sometimes that can have some consequences.
+
+94
+00:06:43,010 --> 00:06:45,980
+So let me show you what I mean by that.
+
+95
+00:06:46,530 --> 00:06:50,340
+So in book dot reviews.
+
+96
+00:06:53,940 --> 00:06:55,890
+Not laborer anything.
+
+97
+00:06:55,980 --> 00:07:01,320
+And now dot review count is zero.
+
+98
+00:07:02,080 --> 00:07:08,320
+So each of these books has this reviews property, and there we have some reviews from Goodreads and
+
+99
+00:07:08,320 --> 00:07:11,260
+from library anything or something.
+
+100
+00:07:11,640 --> 00:07:12,940
+And so then in there.
+
+101
+00:07:13,960 --> 00:07:15,940
+Well, this one doesn't have anything.
+
+102
+00:07:18,490 --> 00:07:19,180
+Or actually it does.
+
+103
+00:07:19,180 --> 00:07:23,890
+But as you saw down here, that's only available in the pro edition, which you have to pay.
+
+104
+00:07:24,780 --> 00:07:29,100
+And so yeah, inside reviews we have good reads in library anything.
+
+105
+00:07:29,100 --> 00:07:32,930
+And then each of those has a rating rating count and reviews count.
+
+106
+00:07:32,940 --> 00:07:40,470
+But for this book, number one that we're using right now, the reviews count for library anything is
+
+107
+00:07:40,470 --> 00:07:41,190
+zero.
+
+108
+00:07:41,190 --> 00:07:47,400
+And so let's use this value so I can show you that this can also go wrong.
+
+109
+00:07:47,400 --> 00:07:49,920
+So this setting a default value.
+
+110
+00:07:52,220 --> 00:07:53,210
+So count.
+
+111
+00:07:53,360 --> 00:07:55,580
+Let's call it actually count wrong.
+
+112
+00:07:57,610 --> 00:07:58,720
+So book.
+
+113
+00:08:01,170 --> 00:08:04,050
+Dot reviews dot library anything.
+
+114
+00:08:04,080 --> 00:08:05,640
+Dot reviews count.
+
+115
+00:08:06,650 --> 00:08:07,430
+Or.
+
+116
+00:08:08,790 --> 00:08:10,020
+No data.
+
+117
+00:08:10,630 --> 00:08:16,840
+So basically we want to get the reviews count, but if there is no value there, then we want it to
+
+118
+00:08:16,840 --> 00:08:17,950
+be no data.
+
+119
+00:08:20,230 --> 00:08:22,270
+So let's see what count wrong is.
+
+120
+00:08:22,300 --> 00:08:26,950
+Well, it says no data, but we know that it is actually zero.
+
+121
+00:08:26,950 --> 00:08:33,160
+So we would want the count to be zero and not no data because there is actually data.
+
+122
+00:08:33,190 --> 00:08:34,090
+Right.
+
+123
+00:08:34,420 --> 00:08:36,700
+So for the book one.
+
+124
+00:08:40,750 --> 00:08:42,970
+For example, or any other book.
+
+125
+00:08:43,000 --> 00:08:46,150
+There is this other number, so something that is not zero.
+
+126
+00:08:46,150 --> 00:08:48,850
+And so here then the count wrong is actually correct.
+
+127
+00:08:48,850 --> 00:08:53,020
+So here 452 is is exactly what we want.
+
+128
+00:08:55,540 --> 00:08:58,000
+But not when it is zero.
+
+129
+00:08:58,240 --> 00:09:01,510
+So when this value is zero, it is a falsy value.
+
+130
+00:09:01,510 --> 00:09:08,530
+And so when this is a falsy value, which zero is the result of this operation, of this operator will
+
+131
+00:09:08,530 --> 00:09:12,730
+be the second part, which in this case is again wrong.
+
+132
+00:09:12,970 --> 00:09:19,900
+Now to solve this, JavaScript has recently added a new logical operator which is called the Nullish
+
+133
+00:09:19,900 --> 00:09:21,480
+coalescing operator.
+
+134
+00:09:21,490 --> 00:09:29,650
+So a very weird name, but what matters is that it works very similarly to the Or operator, but it
+
+135
+00:09:29,650 --> 00:09:33,430
+does also short circuit for Falsy values.
+
+136
+00:09:33,520 --> 00:09:35,200
+So let me show you what that means.
+
+137
+00:09:35,940 --> 00:09:37,410
+So again, const.
+
+138
+00:09:37,770 --> 00:09:44,970
+Now let's just call it count is equal to book dot reviews dot library anything.
+
+139
+00:09:45,000 --> 00:09:48,420
+Dot reviews count and then question mark.
+
+140
+00:09:48,420 --> 00:09:49,350
+Question mark.
+
+141
+00:09:51,140 --> 00:09:52,400
+No data.
+
+142
+00:09:52,460 --> 00:09:54,830
+So here we have basically exactly the same.
+
+143
+00:09:54,830 --> 00:09:58,580
+But instead of using or we're using the knowledge coalescing.
+
+144
+00:09:58,580 --> 00:10:03,860
+And so now the count will indeed not be no data, but will be zero.
+
+145
+00:10:03,980 --> 00:10:10,820
+So this knowledge coalescing operator will only return the second value when the first value is null
+
+146
+00:10:10,820 --> 00:10:15,440
+or undefined, but not when it is zero or an empty string.
+
+147
+00:10:16,960 --> 00:10:23,080
+And I get that this sounds super confusing probably right now, but you will see in practice that this
+
+148
+00:10:23,080 --> 00:10:29,290
+makes all the difference and it is yet another nice addition here, this one to JavaScript.

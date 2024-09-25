@@ -1,0 +1,371 @@
+1
+00:00:00,930 --> 00:00:06,330
+Let's now take a quick look at the very important optional chaining operator.
+
+2
+00:00:07,210 --> 00:00:14,530
+So remember how I said earlier that each book has this review field and it has reviews from this Goodreads
+
+3
+00:00:14,530 --> 00:00:17,110
+source and also from library anything?
+
+4
+00:00:17,470 --> 00:00:20,940
+And notice how each of them has a different reviews count.
+
+5
+00:00:20,950 --> 00:00:27,190
+And so in this lecture we will want to create a function that gives us the total reviews count for each
+
+6
+00:00:27,190 --> 00:00:27,700
+book.
+
+7
+00:00:27,700 --> 00:00:31,240
+So that's going to be basically this one plus this one.
+
+8
+00:00:32,040 --> 00:00:33,900
+Sounds very easy, right?
+
+9
+00:00:34,560 --> 00:00:36,090
+And that's because it is.
+
+10
+00:00:36,120 --> 00:00:39,300
+So let's quickly write a function that does that.
+
+11
+00:00:40,510 --> 00:00:42,910
+So let's say get.
+
+12
+00:00:44,110 --> 00:00:44,920
+Total.
+
+13
+00:00:46,460 --> 00:00:48,020
+Review count.
+
+14
+00:00:50,520 --> 00:00:52,390
+For a certain book.
+
+15
+00:00:52,410 --> 00:00:54,210
+So we pass in a certain book.
+
+16
+00:00:54,480 --> 00:00:58,530
+Let's just do that immediately, just so we see how we use this function.
+
+17
+00:01:01,030 --> 00:01:06,820
+But then, of course, our book here, it could be called Anything Else Just Be, for example, because
+
+18
+00:01:06,820 --> 00:01:09,850
+of course, this is simply the value that we are passing in.
+
+19
+00:01:12,280 --> 00:01:16,780
+So let's create one variable for each of these review counts.
+
+20
+00:01:18,160 --> 00:01:21,160
+So book dot reviews.
+
+21
+00:01:22,280 --> 00:01:23,840
+Thought good reads.
+
+22
+00:01:24,580 --> 00:01:25,930
+Dot review count.
+
+23
+00:01:27,820 --> 00:01:29,980
+And then the same thing for this library.
+
+24
+00:01:29,980 --> 00:01:30,760
+Anything.
+
+25
+00:01:31,640 --> 00:01:39,290
+Book dot reviews dot library anything dot reviews count.
+
+26
+00:01:39,410 --> 00:01:42,170
+And then we simply return one plus the other.
+
+27
+00:01:42,170 --> 00:01:45,260
+So good read should be good reads.
+
+28
+00:01:47,440 --> 00:01:48,400
+Plus.
+
+29
+00:01:50,140 --> 00:01:50,950
+And this one.
+
+30
+00:01:51,820 --> 00:01:51,910
+Now.
+
+31
+00:01:52,040 --> 00:01:52,430
+Okay.
+
+32
+00:01:52,440 --> 00:01:53,160
+Nice.
+
+33
+00:01:53,700 --> 00:02:00,570
+Now we need to lock this to the console, as always, to get our result, which is 812.
+
+34
+00:02:01,520 --> 00:02:05,150
+So that works beautifully for this book, number two.
+
+35
+00:02:05,300 --> 00:02:08,960
+But watch what happens when we use book number three.
+
+36
+00:02:11,630 --> 00:02:14,450
+So let's wait for it.
+
+37
+00:02:15,610 --> 00:02:19,030
+And actually the error pops up already up here.
+
+38
+00:02:19,030 --> 00:02:21,420
+And so then nothing else is evaluated.
+
+39
+00:02:21,460 --> 00:02:25,420
+So cannot read properties of undefined reading review count.
+
+40
+00:02:25,780 --> 00:02:27,100
+Well, let's just.
+
+41
+00:02:28,980 --> 00:02:30,690
+Take out all this code here.
+
+42
+00:02:30,690 --> 00:02:33,510
+And so then the error pops up down here.
+
+43
+00:02:33,510 --> 00:02:37,830
+So again, cannot read properties of undefined reading reviews count.
+
+44
+00:02:37,830 --> 00:02:44,520
+So what this means is that this particular book, number three here in the reviews doesn't have the
+
+45
+00:02:44,520 --> 00:02:45,600
+library anything.
+
+46
+00:02:45,600 --> 00:02:50,610
+So it only has good reads and therefore this here will get undefined.
+
+47
+00:02:50,610 --> 00:02:54,390
+And then we're trying to read reviews count out of undefined.
+
+48
+00:02:54,390 --> 00:02:56,610
+And so that's of course then not possible.
+
+49
+00:02:56,760 --> 00:03:03,510
+So again, the problem is that book reviews dot library anything right now is undefined.
+
+50
+00:03:03,540 --> 00:03:08,070
+So basically in JavaScript this part will then get replaced by undefined.
+
+51
+00:03:08,070 --> 00:03:14,670
+And then essentially we are reading undefined dot reviews count, which of course doesn't exist and
+
+52
+00:03:14,670 --> 00:03:17,550
+then it results in this error right here.
+
+53
+00:03:17,550 --> 00:03:23,700
+But fortunately for us, modern JavaScript has a solution for this which is called optional chaining.
+
+54
+00:03:23,700 --> 00:03:31,360
+And so with optional chaining we can basically ask JavaScript to only keep asking here for these next
+
+55
+00:03:31,360 --> 00:03:36,310
+properties in case that what comes before it actually exists.
+
+56
+00:03:36,310 --> 00:03:43,990
+So here, instead of trying to always read reviews, count out of this, we can just do it optionally.
+
+57
+00:03:44,320 --> 00:03:47,110
+Well, not like this, but like this.
+
+58
+00:03:47,620 --> 00:03:56,410
+So what happens now is that whenever this here is undefined, then JavaScript will no longer even try
+
+59
+00:03:56,410 --> 00:03:58,990
+to read reviews, count out of this.
+
+60
+00:03:58,990 --> 00:04:01,870
+And so this is why we call this optional chaining.
+
+61
+00:04:01,870 --> 00:04:09,790
+So the chain here only continues in case that this part here actually is not undefined or not null.
+
+62
+00:04:10,820 --> 00:04:17,060
+So what happens now is that all of this thing here is immediately undefined and therefore, here we
+
+63
+00:04:17,060 --> 00:04:18,500
+get this not a number.
+
+64
+00:04:18,710 --> 00:04:23,180
+So the result here is still wrong, but at least we're not getting an error anymore.
+
+65
+00:04:24,040 --> 00:04:28,810
+So right now it's not a number because this is some number and then we're adding undefined.
+
+66
+00:04:30,420 --> 00:04:32,190
+Which we can confirm like this.
+
+67
+00:04:33,240 --> 00:04:34,110
+Right.
+
+68
+00:04:34,110 --> 00:04:36,900
+And so yeah, we get not a number.
+
+69
+00:04:36,930 --> 00:04:40,380
+Therefore, here we now need to set a default value.
+
+70
+00:04:40,380 --> 00:04:43,380
+And this is why we learned about the knowledge coalescing.
+
+71
+00:04:43,380 --> 00:04:47,550
+Operator Because that one is actually perfect in this situation.
+
+72
+00:04:48,970 --> 00:04:51,890
+So in this case, we simply say zero.
+
+73
+00:04:51,910 --> 00:04:58,280
+So if there is nothing here, if there is no count for library anything, then it's just zero.
+
+74
+00:04:58,300 --> 00:05:02,500
+So then we're just adding zero to the value that we have from Goodreads.
+
+75
+00:05:02,530 --> 00:05:04,840
+And then we get our final result.
+
+76
+00:05:05,530 --> 00:05:06,040
+Okay.
+
+77
+00:05:06,040 --> 00:05:12,790
+So again, what's happening here is that because of this optional chaining, JavaScript will no longer
+
+78
+00:05:12,790 --> 00:05:17,700
+try to read reviews, count out of this undefined thing here.
+
+79
+00:05:17,710 --> 00:05:23,860
+So before we had undefined dot reviews count, which of course did not exist and gave us an error but
+
+80
+00:05:23,860 --> 00:05:28,930
+with optional chaining, as soon as this here is undefined the entire thing.
+
+81
+00:05:29,050 --> 00:05:32,260
+So all of this will automatically become undefined.
+
+82
+00:05:32,260 --> 00:05:38,770
+And so then we use this knowledge coalescing operator here to then simply give us zero instead of that
+
+83
+00:05:38,770 --> 00:05:40,060
+undefined right here.
+
+84
+00:05:41,020 --> 00:05:48,520
+Okay, so this is helpful whenever we are not sure that all the values that we expect exist in an object.
+
+85
+00:05:48,540 --> 00:05:54,960
+So before we had this here, we would have to first check if actually books, dot reviews, dot library,
+
+86
+00:05:54,960 --> 00:06:00,630
+anything exists and only then we could read reviews count out of that, which would really be a lot
+
+87
+00:06:00,630 --> 00:06:07,560
+of work because for example, let's say we're also not sure if even reviews dot library anything exists.
+
+88
+00:06:07,800 --> 00:06:11,250
+So it would be even safer to do this also here.
+
+89
+00:06:11,340 --> 00:06:13,530
+And why not also here?
+
+90
+00:06:13,530 --> 00:06:21,180
+Because there might be some situation where maybe the book has no Goodreads reviews, so let's simply
+
+91
+00:06:21,180 --> 00:06:22,230
+do this always.
+
+92
+00:06:22,530 --> 00:06:23,670
+At least always.
+
+93
+00:06:23,670 --> 00:06:27,960
+We are not sure about the data structure of the data we are receiving.

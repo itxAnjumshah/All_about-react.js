@@ -1,0 +1,347 @@
+1
+00:00:00,910 --> 00:00:07,060
+And now the last array method that I want to quickly talk about, because we also use it quite frequently
+
+2
+00:00:07,060 --> 00:00:10,870
+in React applications is the sort method.
+
+3
+00:00:11,960 --> 00:00:16,340
+And as the name says, we can use this method to sort an array.
+
+4
+00:00:17,800 --> 00:00:21,610
+So let's start with a small demo array, basically.
+
+5
+00:00:25,250 --> 00:00:27,380
+Let's just give it a few numbers.
+
+6
+00:00:30,020 --> 00:00:33,770
+And let's here create a new array based on that array.
+
+7
+00:00:34,430 --> 00:00:37,370
+So x dot sort.
+
+8
+00:00:37,400 --> 00:00:41,360
+And here we need to pass in a function with two arguments.
+
+9
+00:00:42,290 --> 00:00:50,000
+And we usually just call them A and B, and I will actually not really go into how this algorithm and
+
+10
+00:00:50,000 --> 00:00:51,710
+how this method works here.
+
+11
+00:00:51,710 --> 00:00:59,600
+But let me just tell you that in order to sort this array in an ascending way, we do A minus B.
+
+12
+00:01:01,180 --> 00:01:01,780
+Okay.
+
+13
+00:01:01,780 --> 00:01:02,800
+And now let's.
+
+14
+00:01:03,250 --> 00:01:06,250
+Oh, and actually, we cannot do this because.
+
+15
+00:01:07,100 --> 00:01:09,440
+We already used that apparently before.
+
+16
+00:01:12,980 --> 00:01:13,310
+Okay.
+
+17
+00:01:13,310 --> 00:01:18,830
+And now let's take a look at sorted and indeed it is now sorted in an ascending way.
+
+18
+00:01:18,920 --> 00:01:23,000
+So starting from the lowest number all the way to the highest.
+
+19
+00:01:23,210 --> 00:01:30,140
+Now very, very briefly, what happens here is that basically JavaScript goes over the array, so it
+
+20
+00:01:30,140 --> 00:01:37,460
+loops through it and it calls this function here and A and B are always the current value and the next
+
+21
+00:01:37,460 --> 00:01:38,090
+value.
+
+22
+00:01:38,120 --> 00:01:44,630
+And then here in the callback function, when we return a negative value, then these two numbers will
+
+23
+00:01:44,660 --> 00:01:46,970
+basically be sorted in an ascending way.
+
+24
+00:01:47,000 --> 00:01:53,810
+So the small number will come first and then the biggest number will come afterwards.
+
+25
+00:01:53,810 --> 00:02:00,650
+And if we do the opposite, so if we return a positive number, then well, the opposite will happen.
+
+26
+00:02:00,650 --> 00:02:04,670
+Then these two values will be sorted in a descending way.
+
+27
+00:02:04,910 --> 00:02:11,420
+And so we return these positive or negative numbers simply by subtracting one minus the other.
+
+28
+00:02:11,420 --> 00:02:14,880
+So here a and B in this example will be three and seven.
+
+29
+00:02:14,880 --> 00:02:18,990
+And so then three minus seven is minus four.
+
+30
+00:02:18,990 --> 00:02:24,270
+And so they will then be sorted in an ascending way, as I said before.
+
+31
+00:02:24,360 --> 00:02:25,950
+But that's not really important.
+
+32
+00:02:25,980 --> 00:02:28,980
+You should just basically follow this as a recipe.
+
+33
+00:02:28,980 --> 00:02:33,630
+So when you do A minus B, it will be sorted in an ascending way.
+
+34
+00:02:33,630 --> 00:02:37,140
+When you do B minus A then descending.
+
+35
+00:02:39,230 --> 00:02:43,070
+So indeed, now we start with nine and with one.
+
+36
+00:02:43,800 --> 00:02:48,180
+Now, what's very surprising about the sword method is.
+
+37
+00:02:49,040 --> 00:02:51,770
+What happens when we now check out our.
+
+38
+00:02:52,690 --> 00:02:56,170
+So R itself has been sorted as well.
+
+39
+00:02:56,350 --> 00:02:57,010
+Right.
+
+40
+00:02:57,010 --> 00:03:00,700
+So it also now starts from nine ends in one.
+
+41
+00:03:01,360 --> 00:03:07,840
+And if we switch this around, then you see that both these arrays are exactly the same.
+
+42
+00:03:07,900 --> 00:03:09,910
+So what happened here?
+
+43
+00:03:10,620 --> 00:03:17,850
+Well, what happened is that unlike the map filter and reduce method, this is not a functional method.
+
+44
+00:03:17,850 --> 00:03:21,540
+So this is actually a method that mutates.
+
+45
+00:03:21,540 --> 00:03:24,060
+So it changes the original array.
+
+46
+00:03:24,150 --> 00:03:29,520
+And so we actually didn't even have to store this in a new array, right?
+
+47
+00:03:29,520 --> 00:03:34,080
+Because it already changed this original array anyway.
+
+48
+00:03:34,410 --> 00:03:41,280
+However, usually we do not want that to happen, especially in a front end framework like React, which
+
+49
+00:03:41,280 --> 00:03:44,610
+really does not like us mutating data.
+
+50
+00:03:44,700 --> 00:03:52,560
+So a nice trick that we can do here is to first take a copy of the array simply by doing array, dot
+
+51
+00:03:52,950 --> 00:03:55,640
+slice and open and close.
+
+52
+00:03:55,650 --> 00:04:00,600
+And so this will then basically return a brand new array, which is a copy of this one.
+
+53
+00:04:00,600 --> 00:04:05,910
+And so then on that array we can chain the sort method.
+
+54
+00:04:06,030 --> 00:04:11,560
+And so you see that with this, the sorted is still the, the sorted array.
+
+55
+00:04:11,560 --> 00:04:15,310
+But are, is, is now back to being the original one.
+
+56
+00:04:15,310 --> 00:04:23,620
+So now it's not been affected because you before sorting we took a copy and then we sort it only this
+
+57
+00:04:23,620 --> 00:04:27,640
+copy but not the R itself.
+
+58
+00:04:30,650 --> 00:04:31,130
+Okay.
+
+59
+00:04:31,130 --> 00:04:37,400
+But now we're going back to a more practical examples, because rarely we have an array like this that
+
+60
+00:04:37,400 --> 00:04:41,810
+we need to sort, but usually we always have an array of objects.
+
+61
+00:04:42,260 --> 00:04:45,530
+So that's very common that we have to sort that.
+
+62
+00:04:46,240 --> 00:04:49,390
+And so let's say sort it by.
+
+63
+00:04:51,900 --> 00:04:52,640
+Pages.
+
+64
+00:04:52,650 --> 00:04:59,580
+So as you can imagine, we will now sort the the entire books array by the number of pages.
+
+65
+00:05:00,470 --> 00:05:03,740
+So books dot slice.
+
+66
+00:05:03,770 --> 00:05:06,320
+Again, very important to take a copy here.
+
+67
+00:05:08,300 --> 00:05:10,490
+Then here we just follow that recipe.
+
+68
+00:05:11,370 --> 00:05:11,840
+So.
+
+69
+00:05:11,870 --> 00:05:14,720
+AB And let's say we want a descending one.
+
+70
+00:05:14,720 --> 00:05:24,020
+And so then we say B, but now it's not just B minus A right, because these are now the two book objects.
+
+71
+00:05:24,020 --> 00:05:26,510
+And of course we cannot subtract those.
+
+72
+00:05:26,510 --> 00:05:29,480
+So we need still a numeric value here.
+
+73
+00:05:30,210 --> 00:05:33,660
+And since we want to sort by pages, we do beat pages.
+
+74
+00:05:34,680 --> 00:05:44,100
+Minus eight pages and I'll sort it by pages and yeah, cannot really see that there.
+
+75
+00:05:46,380 --> 00:05:48,570
+Let's close all of these.
+
+76
+00:05:48,610 --> 00:05:49,680
+Oh, yeah.
+
+77
+00:05:51,490 --> 00:05:57,760
+So we start with Lord, Lord of the Rings, which has 1200 something, then 800.
+
+78
+00:05:58,820 --> 00:06:00,080
+600.
+
+79
+00:06:01,290 --> 00:06:02,460
+A 200.
+
+80
+00:06:03,270 --> 00:06:08,520
+And then the shortest one is Harry Potter with 223 pages.
+
+81
+00:06:08,520 --> 00:06:10,200
+So that worked perfectly.
+
+82
+00:06:10,710 --> 00:06:13,680
+Let's do the opposite, just to be sure.
+
+83
+00:06:16,690 --> 00:06:23,590
+And yeah, so now Harry Potter is the first one in line and, and yeah, it's now sorted in an ascending
+
+84
+00:06:23,590 --> 00:06:24,100
+way.
+
+85
+00:06:24,660 --> 00:06:26,370
+So we do this all the time.
+
+86
+00:06:26,370 --> 00:06:32,790
+And so now when I do this inside the React course, I will no longer need to explain what we're doing
+
+87
+00:06:32,790 --> 00:06:35,580
+and we'll simply follow this recipe.

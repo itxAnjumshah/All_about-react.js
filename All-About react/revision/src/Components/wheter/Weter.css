@@ -1,0 +1,61 @@
+body{
+    background-color: aqua;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    padding: 50px 50px;
+   
+}
+.container h1{
+    color: white;
+    font-weight: bolder;
+    padding-bottom: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.container  .child {
+display: flex;
+gap: 10px;
+
+}
+.child  input{
+   padding-left: 5px;
+   width: 296px;
+   box-shadow: 1px 3px 2px 1px;
+   height: 32px;
+}
+.child .btn{
+    background-color: blue;
+    color: black;
+    padding: 10px 0px;
+    cursor: pointer;
+    flex-basis: 10%;
+    box-shadow: 1px 3px 2px 1px;
+    color: aqua;
+    
+}
+.btn:hover{
+    background-color: rgba(7, 7, 108, 0.192);
+    color: aliceblue;
+}
+
+.box{
+    width: 290px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 1px 3px 2px 1px;  
+    position: relative;
+}
+
+.loader{
+    position: absolute;
+    left: 30%;
+    
+}

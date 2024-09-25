@@ -1,0 +1,539 @@
+1
+00:00:00,800 --> 00:00:03,800
+So next up is the filter method.
+
+2
+00:00:04,820 --> 00:00:11,750
+And as the name says, we can use the filter method in order to filter out some elements of the array
+
+3
+00:00:11,750 --> 00:00:13,820
+based on a condition.
+
+4
+00:00:14,150 --> 00:00:21,020
+So let's say that we want to create an array which only has books that have more than 500 pages.
+
+5
+00:00:22,250 --> 00:00:23,420
+So let's say.
+
+6
+00:00:24,610 --> 00:00:26,800
+Long books.
+
+7
+00:00:30,100 --> 00:00:32,830
+And then books dot filter.
+
+8
+00:00:33,610 --> 00:00:36,310
+Give it some more space right here and now.
+
+9
+00:00:36,310 --> 00:00:36,640
+Here.
+
+10
+00:00:36,640 --> 00:00:38,840
+The idea is the same thing as before.
+
+11
+00:00:38,860 --> 00:00:44,590
+So again, we pass in a callback function which should return something.
+
+12
+00:00:45,100 --> 00:00:49,670
+So again, each element of the array is a book.
+
+13
+00:00:49,690 --> 00:00:56,380
+And now here, instead of returning the value that we want in a new array, we need to return a condition
+
+14
+00:00:56,380 --> 00:00:59,290
+which will either be true or false.
+
+15
+00:00:59,290 --> 00:01:06,100
+And if the result of that condition is true, then the current element will go into the filtered array.
+
+16
+00:01:06,100 --> 00:01:11,020
+But if it's false, then it will get filtered out, basically.
+
+17
+00:01:11,170 --> 00:01:12,850
+So let's see that in action.
+
+18
+00:01:12,970 --> 00:01:21,460
+And let's say book dot pages greater than 500 and that's already it.
+
+19
+00:01:22,910 --> 00:01:23,690
+So.
+
+20
+00:01:24,550 --> 00:01:26,230
+Let's put the long books here.
+
+21
+00:01:26,290 --> 00:01:27,850
+Close down here.
+
+22
+00:01:28,060 --> 00:01:29,890
+So long books should be this one.
+
+23
+00:01:29,890 --> 00:01:34,060
+And we see immediately that the array only has the length of three.
+
+24
+00:01:34,090 --> 00:01:34,660
+Now.
+
+25
+00:01:35,340 --> 00:01:44,790
+So this one has 1216 pages, this one 658, and then here also more than 500.
+
+26
+00:01:46,630 --> 00:01:48,360
+So it worked.
+
+27
+00:01:48,370 --> 00:01:52,720
+And so let's now go again over this to see what actually happened.
+
+28
+00:01:53,530 --> 00:02:00,850
+So just like in a map method, this function here, this callback will be called for each elements of
+
+29
+00:02:00,850 --> 00:02:01,630
+the array.
+
+30
+00:02:02,600 --> 00:02:05,780
+So let's then go through the array one by one.
+
+31
+00:02:05,780 --> 00:02:07,670
+So this is the first element.
+
+32
+00:02:07,670 --> 00:02:11,090
+And so here then this condition will be executed.
+
+33
+00:02:11,090 --> 00:02:15,560
+So book dot pages greater than 500 and indeed it is.
+
+34
+00:02:15,590 --> 00:02:20,570
+And so here, this function, this entire callback here will return.
+
+35
+00:02:20,570 --> 00:02:21,170
+True.
+
+36
+00:02:21,170 --> 00:02:25,970
+And so if it is true, then that element goes into the new array.
+
+37
+00:02:25,970 --> 00:02:28,130
+So into the new long books array.
+
+38
+00:02:30,720 --> 00:02:32,110
+Okay, let's do the next one.
+
+39
+00:02:32,130 --> 00:02:36,510
+Here we have pages only 295.
+
+40
+00:02:36,510 --> 00:02:40,530
+And so then here in the second element of the array, this will become false.
+
+41
+00:02:40,530 --> 00:02:44,640
+And if it's false, then the element is basically filtered out.
+
+42
+00:02:44,670 --> 00:02:47,280
+It will not make it into the new array.
+
+43
+00:02:48,980 --> 00:02:51,110
+Then filter moves on to the next one.
+
+44
+00:02:51,140 --> 00:02:54,770
+Here we have 658, which we already saw here in the results.
+
+45
+00:02:54,770 --> 00:02:58,970
+And of course, that's because it has more than 500 here.
+
+46
+00:02:58,970 --> 00:03:02,810
+This one is again left out as it has only 200 and something.
+
+47
+00:03:02,810 --> 00:03:04,640
+And finally, the last one.
+
+48
+00:03:05,180 --> 00:03:05,480
+Yeah.
+
+49
+00:03:05,510 --> 00:03:11,960
+Game of Thrones is a long book, so that, of course, makes it into the long books array.
+
+50
+00:03:12,350 --> 00:03:13,190
+Nice.
+
+51
+00:03:13,220 --> 00:03:17,330
+Now we can actually keep adding new methods here.
+
+52
+00:03:17,690 --> 00:03:21,620
+So after this filter, we can chain on another filter.
+
+53
+00:03:21,620 --> 00:03:28,960
+And that's possible simply because this one here returns a new array and on arrays we can call filter.
+
+54
+00:03:28,970 --> 00:03:29,760
+Right?
+
+55
+00:03:30,020 --> 00:03:32,540
+Therefore, we can call filter here again.
+
+56
+00:03:34,890 --> 00:03:39,750
+And let's now say that we only want the books who have a movie adaptation.
+
+57
+00:03:40,980 --> 00:03:42,900
+So out of these three.
+
+58
+00:03:43,260 --> 00:03:45,780
+So book dot.
+
+59
+00:03:48,320 --> 00:03:49,760
+Pass movie adaptation.
+
+60
+00:03:49,910 --> 00:03:57,050
+And that's already it because this alone so this has movie adaptation is already a Boolean value.
+
+61
+00:03:57,200 --> 00:04:03,680
+So here we don't even need to write a condition because all we need is to return either true or false.
+
+62
+00:04:03,890 --> 00:04:04,750
+Right?
+
+63
+00:04:05,090 --> 00:04:08,780
+And so now long books, well, it's actually still three.
+
+64
+00:04:09,020 --> 00:04:13,070
+So it seems like all of these actually have movie adaptations.
+
+65
+00:04:16,830 --> 00:04:19,300
+Yeah, that's right.
+
+66
+00:04:19,320 --> 00:04:22,140
+So let's just put down here.
+
+67
+00:04:22,930 --> 00:04:27,790
+So book number three, let's put it to false just to see what happens.
+
+68
+00:04:29,770 --> 00:04:30,080
+Now.
+
+69
+00:04:30,090 --> 00:04:30,690
+Right.
+
+70
+00:04:30,690 --> 00:04:34,100
+And now, indeed, that movie also has been filtered out.
+
+71
+00:04:34,110 --> 00:04:36,360
+So we just set Dune to false.
+
+72
+00:04:36,360 --> 00:04:42,720
+And so now we only have here The Lord of the Rings and a Game of Thrones.
+
+73
+00:04:42,720 --> 00:04:47,640
+So these are the only two long books which have a movie adaptation.
+
+74
+00:04:47,640 --> 00:04:49,290
+So let's say long books.
+
+75
+00:04:50,520 --> 00:04:51,390
+With.
+
+76
+00:04:52,560 --> 00:04:55,230
+Movie right now.
+
+77
+00:04:55,230 --> 00:05:00,510
+This one here was just to show you that we can chain multiple filters in practice.
+
+78
+00:05:00,540 --> 00:05:05,610
+It would probably be better to just do an end here, right?
+
+79
+00:05:05,610 --> 00:05:07,350
+So that would be more efficient.
+
+80
+00:05:07,680 --> 00:05:09,840
+But this one also works.
+
+81
+00:05:11,880 --> 00:05:14,640
+So since this is so important.
+
+82
+00:05:14,670 --> 00:05:18,300
+So again, we use this filter really all the time in React.
+
+83
+00:05:18,330 --> 00:05:21,300
+This is really super important, this method.
+
+84
+00:05:21,330 --> 00:05:22,830
+Let's do another one here.
+
+85
+00:05:24,130 --> 00:05:28,030
+So let's only filter out adventure books.
+
+86
+00:05:29,290 --> 00:05:34,840
+So not actually filtering out, but let's basically filter for adventure books.
+
+87
+00:05:34,900 --> 00:05:37,570
+So that's a bit a better way of saying it.
+
+88
+00:05:40,260 --> 00:05:47,400
+So books dot filter and again it will loop over the entire books array.
+
+89
+00:05:47,400 --> 00:05:49,290
+And so let's do books.
+
+90
+00:05:49,900 --> 00:05:52,930
+And then we're back to our genres array.
+
+91
+00:05:54,070 --> 00:05:55,890
+So remember that this is an array.
+
+92
+00:05:55,900 --> 00:06:04,110
+And now what we want is to include books in the array where the genres array includes adventure.
+
+93
+00:06:04,120 --> 00:06:05,920
+So we're looking for adventure books.
+
+94
+00:06:05,920 --> 00:06:09,790
+And so books dot genres should include.
+
+95
+00:06:11,810 --> 00:06:12,650
+Adventure.
+
+96
+00:06:13,860 --> 00:06:16,980
+So includes always returns either true or false.
+
+97
+00:06:16,980 --> 00:06:19,860
+And so right there, we have our condition.
+
+98
+00:06:21,070 --> 00:06:21,120
+Mm.
+
+99
+00:06:21,470 --> 00:06:22,130
+Okay.
+
+100
+00:06:23,070 --> 00:06:25,470
+So adventure books.
+
+101
+00:06:25,560 --> 00:06:27,890
+But actually, let's do something first.
+
+102
+00:06:27,900 --> 00:06:33,870
+So let's again chain another method here, and this time let's actually chain a map.
+
+103
+00:06:35,560 --> 00:06:41,170
+So that is also perfectly fine because we already know that this year returns an array.
+
+104
+00:06:41,170 --> 00:06:44,530
+And so then on an array we can always call map.
+
+105
+00:06:47,590 --> 00:06:48,880
+So again, let's call it book.
+
+106
+00:06:48,880 --> 00:06:53,170
+But of course, it could be called Anything that We Wanted.
+
+107
+00:06:53,320 --> 00:07:00,100
+So in all of these methods here, we called it book because that is what makes more sense semantically.
+
+108
+00:07:00,100 --> 00:07:05,200
+But if we just called it X like it would work the exact same way, right?
+
+109
+00:07:05,230 --> 00:07:09,100
+So this is just a function that we can call the parameter.
+
+110
+00:07:09,100 --> 00:07:12,250
+So the argument that it receives anything that we want.
+
+111
+00:07:13,940 --> 00:07:20,090
+So here again, let's just return the title so that the output is a little bit easier to read.
+
+112
+00:07:21,150 --> 00:07:29,100
+So the books that or where the genres include adventure are The Lord of the Rings Dune and this Harry
+
+113
+00:07:29,100 --> 00:07:29,910
+Potter book.
+
+114
+00:07:32,400 --> 00:07:35,580
+And so if we check that out, then Indeed.
+
+115
+00:07:37,320 --> 00:07:38,700
+Well, here we cannot see that.
+
+116
+00:07:38,850 --> 00:07:41,100
+That's because of the limitation.
+
+117
+00:07:42,160 --> 00:07:45,640
+Where we cannot see so deep into the object with a free version.
+
+118
+00:07:45,640 --> 00:07:46,990
+But I can assure you.
+
+119
+00:07:47,750 --> 00:07:49,910
+That, for example, The Lord of the Rings.
+
+120
+00:07:50,870 --> 00:07:51,200
+Yeah.
+
+121
+00:07:51,200 --> 00:07:53,090
+So you see, here we have adventure.
+
+122
+00:07:53,210 --> 00:07:56,810
+So this book made it into the final array.
+
+123
+00:07:56,840 --> 00:07:58,190
+This one does not.
+
+124
+00:07:58,220 --> 00:08:00,090
+That's why it was not there.
+
+125
+00:08:00,110 --> 00:08:01,120
+This one?
+
+126
+00:08:01,130 --> 00:08:01,310
+Yeah.
+
+127
+00:08:01,310 --> 00:08:02,930
+This one is also adventure.
+
+128
+00:08:02,930 --> 00:08:04,490
+And so is this one.
+
+129
+00:08:04,610 --> 00:08:07,160
+Somehow, Game of Thrones is not an adventure.
+
+130
+00:08:07,220 --> 00:08:08,900
+Not sure why that is.
+
+131
+00:08:10,200 --> 00:08:11,250
+Uh, but yeah.
+
+132
+00:08:12,690 --> 00:08:19,980
+So this is how we combine a filter and a map in an effective way to model our data exactly in the way
+
+133
+00:08:19,980 --> 00:08:20,960
+that we want it.
+
+134
+00:08:20,970 --> 00:08:28,620
+And so since front end development with React and really any other front end framework is really a lot
+
+135
+00:08:28,620 --> 00:08:33,630
+about working with data, these methods here are absolutely essential.
